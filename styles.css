@@ -89,20 +89,21 @@ p {
   z-index: 1000;
 }
 
+/* Header logo block */
 .logo-left {
   flex-shrink: 0;
   padding: 0;
   height: 96px;
   display: flex;
   align-items: center;
-  margin-left: -8px;             /* slight left nudge */
+  margin-left: -28px;     /* was -8px — tuck farther left */
 }
 
 .logo-left img{
-  height: 100%;          /* stays in a 96px-tall box */
+  height: 100%;           /* stays in a 96px-tall box */
   width: auto;
   border-radius: 9999px;
-  transform: scale(2.4);  /* <- bigger (was 1.5) */
+  transform: scale(2.4);  /* keep current size; just moved left */
   transform-origin: left center;
 }
 
@@ -261,19 +262,22 @@ p {
 }
 
 /* Hero Section */
+/* Hero overlay (smaller + tucked to the edge) */
 .hero-row .hero-text{
-position: absolute;
-right: 3%;
-bottom: 4%;
-top: auto;
-width: clamp(280px, 36vw, 420px);
-max-width: 420px;
-background: rgba(44,62,80,.72);
-color: #fff;
-padding: 20px 24px;
-border-radius: 14px;
+  position: absolute;
+  right: 1.5%;                 /* was 3% */
+  bottom: 6%;                  /* a little lower */
+  top: auto;
+  width: clamp(260px, 28vw, 360px);  /* was clamp(280px, 36vw, 420px) */
+  max-width: 360px;
+  background: rgba(44,62,80,.62);    /* lighter/clearer */
+  color: #fff;
+  padding: 16px 18px;               /* a bit tighter */
+  border-radius: 12px;
 }
 
+/* Make links readable on the overlay */
+.hero-text a { color:#fff; text-decoration: underline; font-weight:700; }
 
 .hero-image-wrapper {
   position: relative;

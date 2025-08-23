@@ -1168,19 +1168,66 @@ main a:focus {
     line-height: 1.45;
   }
 
-  /* force all text inside to use the dark color */
-  .hero-text h1,
-  .hero-text p,
-  .hero-text a,
-  .hero-text li,
-  .hero-text strong,
-  .hero-text span {
-    color: #0b2a3b !important;
+.hero-text h1,
+.hero-text p,
+.hero-text li,
+.hero-text strong,
+.hero-text span {                 /* ← no links here */
+color: #0b2a3b !important;
+}
+
+  .hero-text a:not(.button):not(.enroll-btn) {
+    text-decoration: underline;
+    color: #0b5bd3 !important;
   }
 
-  /* make links stand out a bit more */
-  .hero-text a {
-    text-decoration: underline;
-    color: #0b5bd3 !important;       /* or use your brand red if you prefer */
+  .hero-text a.enroll-btn,
+.hero-text a.enroll-btn:visited,
+.hero-text a.enroll-btn:hover,
+.hero-text a.enroll-btn:focus,
+.hero-text a.enroll-btn:active {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  text-decoration:none !important;
+}
+}
+
+/* Ensure solid, high-contrast background */
+.button {
+  background: linear-gradient(#2563eb, #1e40af);
+  border: 0;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  border-radius: 10px;
+  padding: 12px 18px;
+}
+
+/* Optional: make buttons easier to tap on phones */
+@media (max-width: 640px){
+  .hero-text .button{
+    display: block;
+    width: 100%;
+    max-width: 330px;
+    margin: 12px 0;
+    text-align: center;
   }
 }
+
+  /* Force the CTA button text to stay white in all states */
+  .hero-text a.button,
+  .hero-text a.button:link,
+  .hero-text a.button:visited,
+  .hero-text a.button:hover,
+  .hero-text a.button:focus,
+  .hero-text a.button:active {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important; /* iOS/Safari */
+    text-decoration: none !important;
+  }
+
+  /* If the button contains inner elements, keep them white too */
+  .hero-text a.button * {
+    color: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+  }
+

@@ -174,7 +174,6 @@ p {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1001;
 }
 
 .nav-toggle-label span,
@@ -785,21 +784,24 @@ border-radius: 14px;
   }
 }
 
-/* Active Navigation Link */
+/* Active nav item — same look on desktop and mobile */
 .main-nav .nav-menu li a.active {
-  font-weight: bold; /* Ensures it's bolder than the default 700 */
-  color: #9e0853; /* Matches the hover color for consistency */
+  background-color: #9e0853;
+  color: #fff;                /* white text */
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  display: inline-block;      /* ensures the pill hugs the text */
+  font-weight: 700;
 }
 
-/* Mobile Active State */
-@media (max-width: 768px) {
-  .main-nav .nav-menu li a.active {
-    background-color: #9e0853; /* Matches hover background */
-    color: white; /* White text for contrast */
-    font-weight: bold;
+/* Desktop hover pill */
+@media (min-width: 769px) {
+  .nav-menu li a:hover {
+    background-color: #9e0853;
+    color: #ffffff;
+    border-radius: 6px;
   }
 }
-
 main section {
   position: relative;
   z-index: 10;
@@ -811,6 +813,11 @@ main section {
   max-width: 900px;
   width: 100%;
   margin: 2rem auto;
+}
+
+/* Keep it white even on hover */
+.main-nav .nav-menu li a.active:hover {
+  color: #fff;
 }
 
 main section:hover,
@@ -1131,12 +1138,5 @@ main {
     right: 12px !important;
     top: 50% !important;
     transform: translateY(-50%);
-  }
-}
-@media (min-width: 769px) {
-  .nav-menu li a:hover {
-    background-color: #9e0853;
-    color: #ffffff;
-    border-radius: 6px;
   }
 }

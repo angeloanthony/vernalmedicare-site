@@ -1146,3 +1146,25 @@ main {
 main a { color:#9e0853; }
 main a:hover,
 main a:focus { text-decoration: underline; }
+
+/* Powered by Cozelos Data */
+.footer .powered-by{
+  margin-top:.5rem;
+  font-size:.95rem;
+  opacity:.9;
+}
+.footer .powered-by a{ color:#fff; text-decoration:none; font-weight:600; }
+.footer .powered-by a:hover{ text-decoration:underline; }
+
+.footer .powered-logo{
+  height:18px;           /* tweak 16–22px if you want bigger/smaller */
+  width:auto;
+  vertical-align:middle;
+  margin-left:8px;
+  /* keep the logo full-color on the dark footer */
+  filter:none;
+}
+
+/* If you ever want a white mono version instead:
+.footer .powered-logo{ filter:brightness(0) invert(1); }
+*/

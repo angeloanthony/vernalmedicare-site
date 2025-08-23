@@ -261,23 +261,38 @@ p {
   top: 0;
 }
 
-/* Hero Section */
-/* Hero overlay (smaller + tucked to the edge) */
+/* Default: card below the image (mobile & small screens) */
 .hero-row .hero-text{
-  position: absolute;
-  right: 1.5%;                 /* was 3% */
-  bottom: 6%;                  /* a little lower */
-  top: auto;
-  width: clamp(260px, 28vw, 360px);  /* was clamp(280px, 36vw, 420px) */
-  max-width: 360px;
-  background: rgba(44,62,80,.62);    /* lighter/clearer */
-  color: #fff;
-  padding: 16px 18px;               /* a bit tighter */
+  position: static;
+  width: 100%;
+  max-width: 900px;
+  margin: 12px auto 0;
+  background: rgba(44,62,80,.10);
+  color: #002b49;
+  padding: 16px 20px;
   border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
-/* Make links readable on the overlay */
-.hero-text a { color:#fff; text-decoration: underline; font-weight:700; }
+/* Desktop: float the card into the picture, centered near the bottom */
+@media (min-width: 769px){
+  .hero-row .hero-text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2.5%;          /* raise/lower the card */
+    margin: 0;
+    width: min(92%, 900px);/* centered wide card */
+    background: rgba(44,62,80,.46);  /* transparent gray */
+    color: #fff;
+  }
+  .hero-row .hero-text h1,
+  .hero-row .hero-text p{
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.35);
+  }
+  .hero-row .hero-text a{ color:#fff; text-decoration: underline; font-weight:700; }
+}
 
 .hero-image-wrapper {
   position: relative;
@@ -658,30 +673,13 @@ p {
   color: white;
 }
 
-  .hero-banner {
-    height: 400px;
-  }
+/* Mobile layout: text below the photo (not covering it) */
+.hero-banner { height: 400px; }
 
-  .hero-text {
-  margin-top: 160px;
-  padding: 1rem;
-  background-color: rgba(0, 43, 73, 0.3);
-  border-radius: 10px;
-  text-align: center;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
+.hero-text { margin-top: 12px; }
 
-  .hero-text h1 {
-  font-size: 1.3rem;
-  line-height: 1.4;
-}
-
-  .hero-text p {
-  font-size: 0.85rem;
-  line-height: 1.3;
-}
+.hero-text h1 { font-size: 1.5rem; line-height: 1.3; }
+.hero-text p  { font-size: 0.95rem; line-height: 1.5; }
 
   .service-cards,
   .blog-posts {
@@ -749,14 +747,6 @@ p {
 
   .hero-banner {
     height: 300px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
   }
 
   .card,

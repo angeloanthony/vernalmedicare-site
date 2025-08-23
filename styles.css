@@ -57,15 +57,20 @@ p {
 }
 
 /* Top Bar */
+/* Top Bar (single source of truth) */
 .top-bar {
-  background: #002b49;
-  color: white;
+  background: #0b2c45;
+  color: #fff;
   padding: 1rem 0;
   font-size: 1.5rem;
   text-align: center;
   font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow for readability */
+  text-shadow: 1px 1px 2px rgba(0,0,0,.5);
 }
+.top-bar a { color:#fff; text-decoration:none; font-weight:600; }
+.top-bar a:visited { color:#fff; }          /* ← add this line */
+.top-bar a:hover,
+.top-bar a:focus { text-decoration: underline; }
 
 .container.header-top {
   display: flex;
@@ -329,7 +334,6 @@ p {
   font-family: 'Times New Roman', serif;
   font-size: 1.5rem;
   margin: 0.25rem 0;
-  color: white;
 }
 
 /* Welcome Section */
@@ -566,11 +570,6 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
-.payment-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
 
   .header-top {
     flex-direction: row;
@@ -853,18 +852,6 @@ main h2::after {
   left: 25%;
 }
 
-main a {
-  color: #9e0853;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-main a:hover {
-  text-decoration: underline;
-  color: #9e0853; /* brand red */
-}
-
 main p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -935,12 +922,15 @@ main img {
   margin-bottom: 1rem;
 }
 
- .we-accept-img {
-   display: block;
-   margin: 1rem auto;
-   height: 105px;
-   width: 300px;
- }
+.we-accept-img {
+  display: block;
+  margin: 1rem auto;
+  height: 105px;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.we-accept-img:hover { transform: scale(1.05); }
 
  .we-accept-container {
   background-color: white;
@@ -1000,6 +990,13 @@ main {
     margin-right: auto;
 }
 
+@media (max-width: 768px) {
+  .payment-buttons {
+    flex-direction: column;
+    gap: 0.5rem;     /* overrides the base 1rem on phones */
+  }
+}
+
 .paypal-btn {
     display: block; /* Ensure the container is visible */
     min-width: 200px; /* Give enough space for the PayPal button */
@@ -1021,15 +1018,6 @@ main {
     width: 100% !important;
     height: 100% !important;
     border-radius: 6px !important; /* Match SwipeSimple button */
-}
-
-.we-accept-img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.we-accept-img:hover {
-    transform: scale(1.05);
 }
 
 .card img.detective-img,
@@ -1135,17 +1123,19 @@ main {
   }
 }
 
-/* === Top bar contrast fix === */
-.top-bar { background:#0b2c45; color:#fff; }
-.top-bar a { color:#fff; text-decoration:none; font-weight:600; }
-.top-bar a:visited { color:#fff; }
-.top-bar a:hover,
-.top-bar a:focus { text-decoration:underline; }
-
 /* Optional: nicer link color in page content */
-main a { color:#9e0853; }
+/* Links inside page content */
+main a {
+  color: #9e0853;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
 main a:hover,
-main a:focus { text-decoration: underline; }
+main a:focus {
+  color: #9e0853;
+  text-decoration: underline;
+}
 
 /* Powered by Cozelos Data */
 .footer .powered-by{
@@ -1168,3 +1158,29 @@ main a:focus { text-decoration: underline; }
 /* If you ever want a white mono version instead:
 .footer .powered-logo{ filter:brightness(0) invert(1); }
 */
+
+/* Improve contrast on the mobile hero card */
+@media (max-width: 768px) {
+  /* keep your light panel, but use dark text */
+  .hero-text { 
+    background: #e9eef3;            /* your light gray/blue */
+    color: #0b2a3b;                  /* brand navy */
+    line-height: 1.45;
+  }
+
+  /* force all text inside to use the dark color */
+  .hero-text h1,
+  .hero-text p,
+  .hero-text a,
+  .hero-text li,
+  .hero-text strong,
+  .hero-text span {
+    color: #0b2a3b !important;
+  }
+
+  /* make links stand out a bit more */
+  .hero-text a {
+    text-decoration: underline;
+    color: #0b5bd3 !important;       /* or use your brand red if you prefer */
+  }
+}

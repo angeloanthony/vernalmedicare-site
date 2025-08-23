@@ -1140,3 +1140,15 @@ main {
     transform: translateY(-50%);
   }
 }
+
+/* === Top bar contrast fix === */
+.top-bar { background:#0b2c45; color:#fff; }
+.top-bar a { color:#fff; text-decoration:none; font-weight:600; }
+.top-bar a:visited { color:#fff; }
+.top-bar a:hover,
+.top-bar a:focus { text-decoration:underline; }
+
+/* Optional: nicer link color in page content */
+main a { color:#9e0853; }
+main a:hover,
+main a:focus { text-decoration: underline; }

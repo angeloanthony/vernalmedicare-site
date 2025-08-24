@@ -278,6 +278,17 @@
     text-decoration: none !important;
   }
 </style>
+<style>
+  /* …your existing rules in this block… */
+
+  /* Push the "Start a Quote (Enroll)" button lower under the signature line */
+  .signature + p {                /* targets the <p> that comes right after the signature */
+    margin-top: 20px;             /* adjust 16–28px to taste */
+  }
+  @media (max-width: 600px){
+    .signature + p { margin-top: 24px; }
+  }
+</style>
 
 </body>
 </html>

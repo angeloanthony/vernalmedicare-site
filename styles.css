@@ -1231,3 +1231,62 @@ color: #0b2a3b !important;
     -webkit-text-fill-color: inherit !important;
   }
 
+/* 1) Make sure button text is always white on every state */
+a.btn, .btn,
+a.payment-btn, .payment-btn {
+  color: #fff !important;
+}
+a.btn:hover, a.btn:focus, a.btn:active, a.btn:visited,
+.btn:hover, .btn:focus, .btn:active, .btn:visited,
+a.payment-btn:hover, a.payment-btn:focus, a.payment-btn:active, a.payment-btn:visited,
+.payment-btn:hover, .payment-btn:focus, .payment-btn:active, .payment-btn:visited {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* 2) Keep your generic link color, but NOT for buttons */
+main a:not(.btn):not(.payment-btn) {
+  color: #9e0853;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+main a:not(.btn):not(.payment-btn):hover {
+  text-decoration: underline;
+  color: #9e0853;
+}
+
+/* 1) Content links (do NOT style buttons) */
+main a:not(.btn):not(.payment-btn):not(.button):not(.cta) {
+  color: #9e0853;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .3s ease, text-decoration .3s ease;
+}
+main a:not(.btn):not(.payment-btn):not(.button):not(.cta):hover,
+main a:not(.btn):not(.payment-btn):not(.button):not(.cta):focus {
+  color: #9e0853;
+  text-decoration: underline;
+}
+
+/* 2) Buttons must always be white text */
+body a.btn, body .btn,
+body a.payment-btn, body .payment-btn,
+body a.button, body .button,
+body a.cta, body .cta {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important; /* Safari/iOS */
+  text-decoration: none !important;
+}
+body a.btn:hover, body a.btn:focus, body a.btn:active, body a.btn:visited,
+body .btn:hover, body .btn:focus, body .btn:active, body .btn:visited,
+body a.payment-btn:hover, body a.payment-btn:focus, body a.payment-btn:active, body a.payment-btn:visited,
+body .payment-btn:hover, body .payment-btn:focus, body .payment-btn:active, body .payment-btn:visited,
+body a.button:hover, body a.button:focus, body a.button:active, body a.button:visited,
+body .button:hover, body .button:focus, body .button:active, body .button:visited,
+body a.cta:hover, body a.cta:focus, body a.cta:active, body a.cta:visited,
+body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-decoration: none !important;
+}

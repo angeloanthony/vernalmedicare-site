@@ -123,7 +123,24 @@
 
   <!-- Welcome / What We Do -->
   <section class="welcome">
-    <div class="container">
+    <div class="container">      
+      <!-- Video Intro Section -->
+<section class="video-intro">
+  <div class="container">
+    <h2>Meet Your Local Medicare Agent</h2>
+    <p>Hello, my name is Rocco. I’m local here in Vernal, and you can easily find me at Smith Pharmacy. 
+       Unlike call-center agents you’ll never hear from again, I’ll be here for you during enrollment 
+       and afterward whenever you need help.</p>
+    
+    <video id="introVideo" autoplay muted playsinline controls>
+      <source src="Videos/vernal-intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <button id="unmuteBtn">🔊 Unmute</button>
+  </div>
+</section>
+
       <h2>Simple, Local Help with Your Coverage</h2>
       <p>We help you compare plans, enroll, and understand your benefits — at no extra cost to you.</p>
 
@@ -289,6 +306,31 @@
     .signature + p { margin-top: 24px; }
   }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('introVideo');
+  const btn   = document.getElementById('unmuteBtn');
+  if (!video || !btn) return;
+
+  // Click = user gesture → allow sound
+  btn.addEventListener('click', async () => {
+    try {
+      video.muted  = false;
+      video.volume = 1.0;      // make sure it isn’t at 0
+      await video.play();      // resume if it paused when unmuted
+      btn.style.display = 'none';
+    } catch (e) {
+      // If browser blocks it, show a fallback label
+      btn.textContent = '▶️ Play with sound';
+    }
+  });
+
+  // If user unmutes from the built-in controls, hide our button
+  video.addEventListener('volumechange', () => {
+    if (!video.muted && video.volume > 0) btn.style.display = 'none';
+  });
+});
+</script>
 
 </body>
 </html>

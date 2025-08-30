@@ -24,6 +24,8 @@
   <meta name="twitter:description" content="Local, licensed help with Medicare and under-65 health insurance in the Uintah Basin.">
   <meta name="twitter:image" content="https://vernalmedicare.com/pictures/Rocco.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
@@ -34,7 +36,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-NW6ENB89NF');
+    gtag('config', 'G-NW6ENB89NF', { anonymize_ip: true });
   </script>
 
   <!-- Structured data -->
@@ -68,7 +70,7 @@
     <div class="container header-top">
       <div class="logo-left">
         <a href="index.html">
-          <img src="pictures/Rocco.png" alt="Rocco DeLuca — Vernal Medicare" style="height:56px;width:auto;border-radius:9999px">
+          <img src="pictures/Rocco.png" alt="Rocco DeLuca — Vernal Medicare">
         </a>
       </div>
 
@@ -77,15 +79,17 @@
       </div>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
+      <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
         <span></span>
       </label>
 
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav">
         <ul class="nav-menu">
-          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-          <li><a href="vernal.html">Vernal</a></li>
-          <li><a href="medicare-uintah-county.html">Uintah County</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="medigap.html">Medigap</a></li>
+          <li><a href="aca.html">Under-65 Health Insurance</a></li>
+          <li><a href="indemnity.html">Copay Coverage</a></li>
+          <li><a href="life.html">Life Insurance</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="about.html">About</a></li>
@@ -97,25 +101,15 @@
   <!-- Hero -->
   <section class="hero-row">
     <div class="hero-image-wrapper">
-      <img src="pictures/vernalmedicare.png" alt="VernalMedicare.com — Medicare & health insurance help in Vernal, Utah" class="hero-banner" loading="eager">
+      <img src="pictures/vernalmedicare.png" alt="VernalMedicare.com — Medicare & health insurance help in Vernal, Utah" class="hero-banner" loading="eager" decoding="async" fetchpriority="high">
       <div class="hero-text">
         <h1>Medicare &amp; Health Insurance in Vernal, Utah</h1>
-        <p>Compare Medicare Advantage and Part D on your own by clicking on the blue</p>
+        <p>Compare Medicare Advantage and Part D on your own by clicking on the blue button below</p>
        <a href="https://www.sunfirematrix.com/app/consumer/medicareadvocates/10569110/"
    class="enroll-btn"
    target="_blank" rel="noopener noreferrer">
   Compare Plans & Enroll
 </a>
-
-<style>
-.enroll-btn{
-  display:inline-block;padding:14px 22px;border-radius:10px;
-  font-weight:700;text-decoration:none;
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-  background:linear-gradient(#2563eb,#1e40af);color:#fff
-}
-.enroll-btn:hover{transform:translateY(-1px)}
-</style>
 
       </div>
     </div>
@@ -125,13 +119,13 @@
   <section class="welcome">
    <div class="vm">
   <iframe
-    src="https://player.vimeo.com/video/1114136174?badge=0&autopause=0"
+    src="https://player.vimeo.com/video/1114136174?badge=0&autopause=0&dnt=1"
     allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen
+    allowfullscreen loading="lazy"
     title="vernal-intro"></iframe>
 </div>
 
-<script src="https://player.vimeo.com/api/player.js"></script>
+<script defer src="https://player.vimeo.com/api/player.js"></script>
 
     <div class="container">      
       <h2>Simple, Local Help with Your Coverage</h2>
@@ -169,11 +163,6 @@
     Check Your Options (Enroll)
   </a>
 </p>
-
-      <p style="margin-top:10px;font-size:.9rem;opacity:.9">
-        We do not offer every plan available in your area. Any information we provide is limited to the plans we do offer in your area.
-        Contact <a href="https://www.medicare.gov" target="_blank" rel="nofollow">Medicare.gov</a> or 1-800-MEDICARE (TTY: 1-877-486-2048), 24/7, to get information on all your options.
-      </p>
     </div>
   </section>
 
@@ -185,6 +174,21 @@
       <blockquote>“He explained the differences between Advantage and Medigap in plain English.” — M.K.</blockquote>
     </div>
   </section>
+
+  <!-- FAQ (visible, matches schema) -->
+<section id="faq" class="container" aria-labelledby="faq-title" style="margin:2rem 0">
+  <h2 id="faq-title">Frequently Asked Questions</h2>
+
+  <details>
+    <summary>Do you charge a fee for your help?</summary>
+    <p>No. There is no additional cost to work with us. We may be paid by the plan/carrier if you enroll.</p>
+  </details>
+
+  <details>
+    <summary>Do you offer every Medicare plan in my area?</summary>
+    <p>We do not offer every plan available in your area. Information we provide is limited to the plans we do offer. For all options, visit Medicare.gov or call 1-800-MEDICARE (TTY: 1-877-486-2048).</p>
+  </details>
+</section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -200,7 +204,7 @@
     </div>
 <p class="powered-by">
   Powered by cozelosdata
-  <a href="https://cozelosdata.com/" target="_blank" rel="noopener" class="powered-link">
+  <a href="https://cozelosdata.com/" target="_blank" rel="noopener noreferrer" class="powered-link">
     <picture>
       <source srcset="pictures/cozelos.webp" type="image/webp">
       <img src="pictures/cozelos.png" alt="Cozelos Data" class="powered-logo" width="120" height="24" loading="lazy" decoding="async">
@@ -209,38 +213,28 @@
 </p>
   </footer>
 
-  <!-- FAQ structured data (optional, keep if relevant to home) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do you charge a fee for your help?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. There is no additional cost to work with us. We may be paid by the plan/carrier if you enroll." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer every Medicare plan in my area?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We do not offer every plan available in your area. Information we provide is limited to the plans we do offer. For all options, visit Medicare.gov or call 1-800-MEDICARE (TTY: 1-877-486-2048)." }
-      }
-    ]
-  }
-  </script>
-
   <!-- Scripts -->
   <script>
     // Active-nav + year
-    (function() {
-      const here = location.pathname.replace(/\/$/, '') || '/';
-      document.querySelectorAll('.nav-menu a').forEach(a => {
-        const href = a.getAttribute('href');
-        const normalized = (href === 'index.html' || href === './' || href === '/') ? '/' : `/${href}`;
-        if (normalized.replace(/\/$/, '') === here.replace(/\/$/, '')) a.classList.add('active');
-      });
-      const y = document.getElementById('current-year'); if (y) y.textContent = new Date().getFullYear();
-    })();
+   (function () {
+  // Normalize: treat "/index.html" as "/"
+  const hereRaw = location.pathname.replace(/\/$/, '') || '/';
+  const here = (hereRaw === '/index.html') ? '/' : hereRaw;
+
+  document.querySelectorAll('.nav-menu a').forEach(a => {
+    try {
+      const url = new URL(a.getAttribute('href'), location.origin);
+      const pathRaw = url.pathname.replace(/\/$/, '') || '/';
+      const path = (pathRaw === '/index.html') ? '/' : pathRaw;
+      const hasHash = url.hash && url.hash.length > 0;
+      a.classList.toggle('active', path === here && !hasHash);
+    } catch (e) {}
+  });
+
+  // Year
+  const y = document.getElementById('current-year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
 
     // Mobile nav toggle (fixed logic)
     (function setupToggle() {
@@ -254,8 +248,9 @@
         navToggle.checked = on;
         navMenu.style.cssText = on ? 'display:block!important' : 'display:none!important';
         toggleLabel.classList.toggle('open', on);
-        toggleLabel.setAttribute('aria-expanded', on);
+      toggleLabel.setAttribute('aria-expanded', on ? 'true' : 'false');
       }
+      document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => setState(false)));
       toggleLabel.addEventListener('click', () => setState(!isToggled));
       toggleLabel.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setState(!isToggled); }
@@ -287,17 +282,78 @@
     -webkit-text-fill-color: #fff !important; /* iOS/Safari */
     text-decoration: none !important;
   }
-</style>
-<style>
   /* …your existing rules in this block… */
+
+  /* FAQ styles */
+#faq { margin-top: 24px; scroll-margin-top: 80px; }
+#faq details { 
+  margin: 10px 0; 
+  padding: 12px; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 8px; 
+  background: #fafafa; 
+}
+#faq summary { 
+  font-weight: 700; 
+  cursor: pointer; 
+}
+#faq p { margin-top: 8px; }
+
 
   /* Push the "Start a Quote (Enroll)" button lower under the signature line */
   .signature + p {                /* targets the <p> that comes right after the signature */
     margin-top: 20px;             /* adjust 16–28px to taste */
   }
-  @media (max-width: 600px){
-    .signature + p { margin-top: 24px; }
+  /* Add space between the round photo and the title (desktop only) */
+@media (min-width: 769px){
+  .logo-left { padding-right: 90px; }
+}
+
+  .enroll-btn{
+  display:inline-block;padding:14px 22px;border-radius:10px;
+  font-weight:700;text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  background:linear-gradient(#2563eb,#1e40af);color:#fff
+}
+
+.enroll-btn:hover{transform:translateY(-1px)}
+/* Bigger round photo that overlaps the banner */
+.main-header { position: relative; }
+/* Header logo sizing (desktop) */
+@media (min-width: 769px){
+  .logo-left img{
+    height: 128px;      /* bump to 140px if you want bigger */
+    width: auto;
+    border-radius: 9999px;
+    position: relative;
+    top: 12px;
+    z-index: 5;
+    transform: none;    /* cancel any earlier scale() */
   }
+}
+
+/* Header logo sizing (mobile) */
+@media (max-width: 768px){
+  .logo-left img{
+    height: 56px;
+    width: auto;
+    top: 0;
+    transform: none;
+  }
+}
+
+/* LOCK HERO OVERLAY WIDTH (wins over earlier rules) */
+@media (min-width: 769px){
+  .hero-image-wrapper > .hero-text{
+    width: 870px !important;      /* set your target width */
+    max-width: 96% !important;      /* keep a little margin on narrow screens */
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+
 </style>
 
 </body>

@@ -18,8 +18,8 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 96%;
+  max-width: 1600px;   /* wider */
   margin: auto;
 }
 
@@ -75,14 +75,14 @@ p {
 .container.header-top {
   display: flex;
   align-items: center;
-  justify-content: flex-start;   /* push content left */
-  width: 100%;                   /* override .container 90% */
-  max-width: 1200px;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1600px;   /* match container */
   margin: 0 auto;
-  padding: 0;                    /* remove left/right padding */
-  gap: 0.5rem;                   /* small space between avatar & title */
-  position: relative;            /* for the hamburger absolute pos */
-  min-height: 96px;              /* keep compact header */
+  padding: 0;
+  gap: 0.6rem;         /* a bit tighter */
+  position: relative;
+  min-height: 96px;
 }
 
 /* Header */
@@ -95,21 +95,29 @@ p {
 }
 
 /* Header logo block */
+/* Header logo block (bigger, overlaps the hero, shifted left) */
 .logo-left {
   flex-shrink: 0;
   padding: 0;
   height: 96px;
   display: flex;
   align-items: center;
-  margin-left: -28px;     /* was -8px — tuck farther left */
+  margin-left: -40px;      /* move farther left (tweak -32 to -52 if needed) */
+  margin-right: 12px;      /* breathing room before the title */
 }
 
 .logo-left img{
-  height: 100%;           /* stays in a 96px-tall box */
+  height: 100%;
   width: auto;
   border-radius: 9999px;
-  transform: scale(2.4);  /* keep current size; just moved left */
-  transform-origin: left center;
+  position: relative;
+  top: 14px;               /* drops it to overlap the banner */
+  z-index: 5;              /* keep on top of the banner */
+}
+
+@media (min-width: 769px){
+  /* Reserve space for the scaled headshot */
+  .logo-left { padding-right: 130px; } /* adjust 110–160px to taste */
 }
 
 .site-name-center {
@@ -122,13 +130,16 @@ p {
   font-size: 2.5rem;
   font-weight: 900;
   color: #002b49;
-  margin: 0; /* Remove default margin to avoid height increase */
+  margin: 0;
+  white-space: nowrap;   /* <- prevents breaking */
 }
 
 /* Navigation */
 .main-nav {
-  text-align: center;
-  padding: 1rem 0;
+  text-align: right;
+  padding: 0;          /* desktop */
+  flex: 1 1 auto;      /* lets the nav take remaining space */
+  margin-left: auto;   /* pushes nav to the right edge */
 }
 
 /* Show menu when checkbox is checked */
@@ -136,24 +147,27 @@ p {
   display: block;
 }
 
-
 .nav-menu {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 0.5rem;
+  flex-wrap: nowrap;     /* keep single row */
+  gap: 0.55rem;          /* slightly tighter */
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0;
+  white-space: nowrap;   /* keep the whole row from wrapping */
 }
 
 .nav-menu li a {
   text-decoration: none;
   color: #002b49;
   font-weight: 700;
-  font-size: 1.4rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.25rem;     /* a touch smaller so it fits */
+  line-height: 1.1;
+  padding: 0.45rem 0.8rem;
   display: inline-block;
-  transition: color 0.3s ease; /* Makes color change smooth */
+  white-space: nowrap;     /* prevent “ACA (Under–65)” and “Life Insurance” from breaking */
+  transition: color 0.3s ease;
 }
 
 .nav-menu li a:hover {
@@ -285,25 +299,56 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 2.5%;          /* raise/lower the card */
-    margin: 0;
-    width: min(92%, 900px);/* centered wide card */
-    background: rgba(44,62,80,.46);  /* transparent gray */
+    bottom: 0;
+    width: min(100%, 1600px);     /* your current value is fine */
+    max-width: none !important;   /* ← override the 900px cap */
+    padding: 14px 18px;
+    background: rgba(44,62,80,.46);
     color: #fff;
+    border-radius: 8px;
+    margin: 0;                    /* (optional) cancel mobile margin */
   }
-  .hero-row .hero-text h1,
-  .hero-row .hero-text p{
+
+  /* … your h1/p rules are already set to max-width:none */
+}
+
+   /* Keep headline full-width (no forced wrap) */
+  .hero-row .hero-text h1{
     color: #fff;
     text-shadow: 0 2px 6px rgba(0,0,0,.35);
+    font-size: clamp(2rem, 2.2vw, 2.6rem);
+    line-height: 1.15;
+    max-width: none !important;    /* ← remove the 34ch cap */
+    margin: 0 0 .35rem;
+    white-space: nowrap;
   }
-  .hero-row .hero-text a{ color:#fff; text-decoration: underline; font-weight:700; }
+
+/* Body text bigger & more readable on desktop */
+.hero-row .hero-text p{
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+  font-size: clamp(1.15rem, 0.9vw + 0.65rem, 1.40rem); /* was 1.05rem */
+  line-height: 1.48;                                   /* was 1.35 */
+  margin: 0 0 .6rem;
+  max-width: none !important;
+  white-space: nowrap;
 }
+
+  /* Shorter button inside hero only */
+  .hero-row .hero-text .button{
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+
+  .hero-row .hero-text a{
+    color:#fff; text-decoration: underline; font-weight:700;
+  }
 
 .hero-image-wrapper {
   position: relative;
-  max-width: 1200px;
+  max-width: 1600px;   /* was 1200px */
   margin: 0 auto;
-  overflow: visible; /* Allow image to pop outside */
+  overflow: visible;
   border-radius: 12px;
   z-index: 1;
 }
@@ -317,7 +362,7 @@ p {
 
 .hero-banner {
   width: 100%;
-  height: 600px;
+  height: 480px;           /* was 600px */
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -584,17 +629,15 @@ p {
 
   .container.header-top {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0.5rem;
     min-height: 60px;
   }
 
-  .site-name-center {
-    order: 2;
-    flex: 1;
-    text-align: left;
-    padding-left: 1rem;
-  }
+ .site-name-center {
+  padding: 0 1rem;
+  flex: 0 0 auto;        /* title takes only what it needs */
+}
 
   .site-name {
     font-size: 1.8rem;
@@ -677,8 +720,8 @@ p {
 
 .hero-text { margin-top: 12px; }
 
-.hero-text h1 { font-size: 1.5rem; line-height: 1.3; }
-.hero-text p  { font-size: 0.95rem; line-height: 1.5; }
+.hero-text h1 { font-size: 1.5rem; line-height: 1.3; white-space: normal; }
+.hero-text p  { font-size: 0.95rem; line-height: 1.5; white-space: normal; }
 
   .service-cards,
   .blog-posts {
@@ -1049,7 +1092,7 @@ main {
 }
 
 .logo-left img:hover{
-  transform: scale(2.5) rotate(-1deg);
+  transform: scale(1.8) rotate(-1deg);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
@@ -1112,6 +1155,7 @@ main {
     width: auto !important;
     transform: none !important;
     border-radius: 9999px;
+    top: 0 !important;
   }
   .site-name {
     font-size: 1.6rem !important;
@@ -1309,3 +1353,4 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
 @supports not (aspect-ratio: 16 / 9){
   .vm iframe{ height: 540px; }  /* fallback for very old browsers */
 }
+

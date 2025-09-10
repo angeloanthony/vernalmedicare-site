@@ -97,26 +97,54 @@
   </header>
 
 <main id="content">
-    <section class="container" id="life-video">
+    <section class="container" id="medigap-intro">
   <h2 style="margin:16px 0;">Life Insurance — Video</h2>
-  <div style="position:relative; padding-top:56.25%; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.12);">
-    <iframe
-      src="https://player.vimeo.com/video/1114526437?title=0&byline=0&portrait=0&dnt=1"
-      style="position:absolute; inset:0; width:100%; height:100%; border:0;"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen
-      loading="lazy"
-      title="Life Insurance Video">
-    </iframe>
+
+  <div class="mg-two-up">
+    <!-- LEFT: video card -->
+    <div class="mg-card">
+      <div class="mg-ratio">
+        <iframe
+          src="https://player.vimeo.com/video/1114526437?title=0&byline=0&portrait=0&dnt=1"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          title="Life Insurance Video"></iframe>
+      </div>
+    </div>
+
+    <!-- RIGHT: image card (use any image you like) -->
+   <!-- RIGHT: flip-on-click comic (3 images) -->
+<a class="vm-comic" href="pictures/joke23.webp" target="_blank" rel="noopener">
+  <img
+    src="pictures/joke12.webp"
+    data-alt="pictures/joke35.webp"
+    data-alt2="pictures/joke16.webp"
+    alt="Medicare comic"
+    loading="lazy" decoding="async">
+</a>
+
   </div>
 </section>
+
 
   <!-- Hero -->
   <section>
     <h1>Life Insurance — Simple & Local</h1>
     <p>Protect your family’s income, your home, and final expenses with a plan that fits your budget. I’ll keep it simple and show clear options.</p>
-    <p><a class="button primary" href="tel:+14352195120">Call (435) 219-5120</a>
-       <a class="button" href="about.html">Email us</a></p>
+    <p>
+  <a class="button primary" href="tel:+14352195120" aria-label="Call Vernal Medicare at 435-219-5120">
+    Call (435) 219-5120
+  </a>
+  <a
+    class="button"
+    href="mailto:rocco@medicareadvocates.com?subject=Copay%20Coverage%20question&body=Hi%20Rocco%2C%0D%0A%0D%0AI%27d%20like%20help%20with%20Copay%20Coverage.%20My%20current%20plan%20is%3A%20____.%0D%0A%0D%0AThanks!"
+    aria-label="Email Vernal Medicare"
+  >
+    Email us
+  </a>
+</p>
+
   </section>
 
   <!-- What we offer -->
@@ -156,8 +184,19 @@
   <section>
     <h2>Get a quick quote</h2>
     <p>Tell me your age, state, and a target amount. I’ll show simple options and prices—no pressure.</p>
-    <p><a class="button primary" href="tel:+14352195120">Call (435) 219-5120</a>
-       <a class="button" href="about.html">Email us</a></p>
+    <p>
+  <a class="button primary" href="tel:+14352195120" aria-label="Call Vernal Medicare at 435-219-5120">
+    Call (435) 219-5120
+  </a>
+  <a
+    class="button"
+    href="mailto:rocco@medicareadvocates.com?subject=Copay%20Coverage%20question&body=Hi%20Rocco%2C%0D%0A%0D%0AI%27d%20like%20help%20with%20Copay%20Coverage.%20My%20current%20plan%20is%3A%20____.%0D%0A%0D%0AThanks!"
+    aria-label="Email Vernal Medicare"
+  >
+    Email us
+  </a>
+</p>
+
   </section>
 
   <!-- Disclosures -->
@@ -215,5 +254,52 @@
   <call-us-selector phonesystem-url="https://1888.3cx.cloud" party="LiveChat956014"></call-us-selector>
   <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
 
+  <script>
+(function(){
+  document.addEventListener('click', function(e){
+    const link = e.target.closest('.vm-comic');
+    if (!link) return;
+
+    // We’re flipping, not opening the image
+    e.preventDefault();
+
+    const img = link.querySelector('img');
+    if (!img) return;
+
+    // half-flip, then rotate sources, then unflip
+    img.classList.add('is-flipping');
+
+    const onEnd = function(){
+      img.removeEventListener('transitionend', onEnd);
+
+      // Current + alternates
+      const a = img.getAttribute('src');
+      const b = img.getAttribute('data-alt');   // optional
+      const c = img.getAttribute('data-alt2');  // optional (3rd)
+
+      if (c) {
+        // 3-image rotation: a -> b -> c -> a
+        img.setAttribute('src', b || a);
+        img.setAttribute('data-alt', c || a);
+        img.setAttribute('data-alt2', a);
+      } else if (b) {
+        // 2-image swap: a <-> b
+        img.setAttribute('src', b);
+        img.setAttribute('data-alt', a);
+      }
+
+      // keep link’s href in sync with the visible image
+      link.setAttribute('href', img.getAttribute('src'));
+
+      // let the browser settle, then unflip
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        img.classList.remove('is-flipping');
+      }));
+    };
+
+    img.addEventListener('transitionend', onEnd);
+  });
+})();
+</script>
 </body>
 </html>

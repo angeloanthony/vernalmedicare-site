@@ -614,7 +614,7 @@ p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 960px), (orientation: landscape) and (max-height: 480px) {
 
   .header-top {
     flex-direction: row;
@@ -701,14 +701,15 @@ p {
     display: block;
   }
 
-  .nav-menu li a {
-    font-size: 1.2rem;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    color: white;
-    transition: background-color 0.3s;
-  }
+.nav-menu li a {
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transition: background-color 0.3s;
+  white-space: normal;   /* ← new: allow wrapping on phones */
+}
 
 .nav-menu li a:hover {
   background-color: #9e0853; /* match brand red */
@@ -1141,7 +1142,7 @@ main {
 .review-card blockquote { font-style: italic; margin: 0 0 .5rem; }
 .review-card figcaption { font-weight: bold; color: #002b49; }
 
-@media (max-width: 768px) {
+@media (max-width: 960px), (orientation: landscape) and (max-height: 480px) {
   .container.header-top {
     padding: .5rem 0 !important;
     min-height: 64px !important;
@@ -1348,9 +1349,640 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
   height: auto;
   border: 0;
   border-radius: 12px;
-  background: #000;
+  background: transparent;
 }
 @supports not (aspect-ratio: 16 / 9){
   .vm iframe{ height: 540px; }  /* fallback for very old browsers */
 }
 
+/* ---- Video + Comic (two-up) ---- */
+.vm2-up{
+  display:grid;
+  grid-template-columns:1fr;       /* stack on mobile */
+  gap:14px;
+  align-items:start;
+  max-width:1200px;
+  margin:16px auto;
+  padding:0 12px;
+}
+.vm2-up .vm{ max-width:100%; margin:0; }  /* let video fill its column */
+
+@media (min-width: 860px){
+  .vm2-up{ grid-template-columns: 3fr 2fr; } /* side-by-side on desktop */
+}
+
+.vm-comic{
+  display:block;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:12px;
+  padding:8px;
+  box-shadow:0 6px 24px rgba(0,0,0,.08);
+}
+.vm-comic img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:8px;
+}
+
+.vm-comic { cursor: pointer; }
+.vm-comic img {
+  transition: transform 0.28s ease;
+  transform-origin: 50% 50%;
+}
+.vm-comic img.is-flipping { transform: rotateY(90deg); }
+
+/* ===== Smile Carousel ===== */
+.smile { padding: 12px 0; background:#f2f7fb; border-top:4px solid #0b2a3a; border-bottom:4px solid #0b2a3a; }
+.smile-wrap{
+  max-width:1200px; margin:0 auto; padding:0 12px; position:relative;
+}
+.smile-track{
+  display:flex; gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior:smooth;
+  padding-bottom:8px;  /* space for shadow fade */
+}
+.smile-slide{
+  flex: 0 0 85%;                 /* big, easy slide on phones */
+  scroll-snap-align:center;
+  background:#fff;
+  border:1px solid rgba(11,42,58,.08);
+  border-radius:14px;
+  padding:10px;
+  box-shadow:0 6px 24px rgba(0,0,0,.08);
+  display:flex; align-items:center; justify-content:center;
+}
+.smile-slide img{
+  max-height: clamp(150px, 28vh, 300px); /* controls how tall the comics can get */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Desktop: narrower slides so you can see the next one peeking */
+@media (min-width: 860px){
+  .smile-slide{ flex: 0 0 520px; }
+}
+
+/* Arrows */
+.smile-arrow{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:42px; height:42px; border-radius:50%;
+  border:0; background:#002b49; color:#fff; font-size:28px; line-height:42px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  cursor:pointer;
+}
+.smile-arrow.prev{ left:6px; }
+.smile-arrow.next{ right:6px; }
+.smile-arrow:focus{ outline:3px solid #9e0853; outline-offset:2px; }
+
+/* Hide arrows on very small screens (swipe instead) */
+@media (max-width: 480px){
+  .smile-arrow{ display:none; }
+}
+
+/* Move arrows farther from each other (desktop) */
+@media (min-width: 860px){
+  .smile-arrow.prev{ left: -120px; }   /* try -20 to -40 */
+  .smile-arrow.next{ right: -120px; }
+}
+
+/* --- Smile badge (top-left) --- */
+.smile-badge{
+  position:absolute;
+  top:-18px;           /* overlap the section a bit */
+  left:10px;
+  width:52px; 
+  height:52px;
+  border-radius:50%;
+  background:#0b2a3a;  /* brand navy */
+  color:#fff;          /* emoji will render white on most platforms */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  box-shadow:0 8px 22px rgba(0,0,0,.2);
+  z-index:2;
+  animation:smile-bob 3.2s ease-in-out infinite;
+}
+
+/* gentle bob + tiny tilt */
+@keyframes smile-bob{
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-6px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce){
+  .smile-badge{ animation:none; }
+}
+
+/* Tweak for small phones */
+@media (max-width: 480px){
+  .smile-badge{
+    top:-14px; left:8px;
+    width:44px; height:44px; font-size:24px;
+  }
+}
+.smile-badge { overflow: hidden; }              /* keep it circular */
+.smile-badge img{ width:100%; height:100%; object-fit:contain; display:block; }
+
+/* Make the smile badge visible & on top */
+.smile-wrap{ position: relative !important; }
+
+.smile-badge{
+  position: absolute !important;
+  top: 6px !important;          /* put it inside the section */
+  left: 10px !important;
+  width: 56px; 
+  height: 56px;
+  border-radius: 50%;
+  background: #0b2a3a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000 !important;     /* above slides/arrows */
+}
+
+.smile-badge img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Stronger 3D effect for the video frame */
+.vm--3d{
+  /* deeper bevel + richer contrast */
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(145deg, #d9e2ec, #afbdcb) border-box;
+  border: 3px solid transparent;           /* thicker rim */
+  box-shadow:
+    0 24px 48px rgba(0,0,0,.30),           /* big soft drop */
+    0 10px 18px rgba(0,0,0,.18),           /* mid shadow */
+    0 2px  4px  rgba(0,0,0,.10);           /* crisp edge */
+  border-radius: 18px;
+  padding: 12px;                            /* thicker frame */
+}
+
+.vm--3d::after{
+  /* stronger inner bevel */
+  inset: 3px;
+  border-radius: 15px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),    /* top highlight */
+    inset 0 -12px 18px rgba(0,0,0,.14),     /* bottom shade */
+    inset 0 0 0 1px rgba(255,255,255,.35);  /* thin inner rim */
+}
+
+/* “Floor” shadow for depth (sits under the frame) */
+.vm--3d::before{
+  content:"";
+  position:absolute;
+  left:8%;
+  right:8%;
+  bottom:-18px;
+  height:26px;
+  z-index:-1;
+  border-radius:50%;
+  background: radial-gradient(ellipse at center,
+              rgba(0,0,0,.28) 0%,
+              rgba(0,0,0,0) 70%);
+  filter: blur(4px);                        /* soft edge */
+}
+
+/* === Reviews Carousel (namespaced) === */
+#vm-reviews {
+  position: relative;
+  max-width: 1100px;
+  margin: 24px auto 48px;
+  padding: 8px 12px 28px;
+  border-radius: 18px;
+  background: #fff;
+  /* subtle 3D frame + glow that matches your card style */
+  box-shadow:
+    0 1px 0 rgba(0,0,0,.05),
+    0 8px 24px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.6);
+}
+
+#vm-reviews .vm-reviews__track {
+  display: flex;
+  transition: transform .5s ease;
+  will-change: transform;
+}
+
+#vm-reviews .vm-reviews__slide {
+  flex: 0 0 100%;
+  padding: 20px 22px;
+  box-sizing: border-box;
+}
+
+#vm-reviews .vm-reviews__text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+#vm-reviews .vm-reviews__meta {
+  display: grid;
+  grid-template-columns: 44px auto;
+  gap: 10px 14px;
+  align-items: center;
+}
+
+#vm-reviews .vm-reviews__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(145deg,#3b5998,#1877f2); /* FB blue vibe */
+  box-shadow: 0 4px 10px rgba(24,119,242,.25);
+}
+
+#vm-reviews .vm-reviews__source {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .92rem;
+  color: #4a4a4a;
+}
+
+#vm-reviews .vm-reviews__link { text-decoration: underline; }
+
+#vm-reviews .vm-reviews__nav {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.05);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  transition: background .2s;
+}
+#vm-reviews .vm-reviews__nav:hover { background: rgba(0,0,0,.12); }
+#vm-reviews .vm-reviews__prev { left: 6px; }
+#vm-reviews .vm-reviews__next { right: 6px; }
+
+#vm-reviews .vm-reviews__dots {
+  position: absolute;
+  left: 0; right: 0; bottom: 6px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+#vm-reviews .vm-reviews__dot {
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: #cfd8e3;
+  cursor: pointer;
+}
+#vm-reviews .vm-reviews__dot.is-active { background: #1877f2; }
+
+/* Star icons (auto-filled by JS) */
+#vm-reviews .vm-reviews__stars svg {
+  width: 15px; height: 15px;
+  display: inline-block;
+}
+
+/* put in your CSS (or the <style> at bottom) */
+#vm-reviews { overflow: hidden; }
+#vm-reviews .vm-reviews__slide { flex: 0 0 100%; } /* one full panel per slide */
+
+/* === Spiritual Thoughts (namespaced) === */
+#vm-spirit { max-width: 1100px; margin: 40px auto 28px; padding: 12px; }
+#vm-spirit .spirit-wrap {
+  position: relative;
+  background:#fff;
+  border-radius: 18px;
+  padding: 28px 36px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,.04),
+    0 10px 24px rgba(0,0,0,.10),
+    inset 0 0 0 2px #e8e8e8;
+}
+#vm-spirit .spirit-track {
+  display:flex;
+  transition: transform .5s ease;
+  will-change: transform;
+}
+#vm-spirit .spirit-quote {
+  flex: 0 0 100%;
+  display:grid;
+  gap:16px;
+  place-items:center;
+  text-align:center;
+  padding: 18px 12px;
+  border-radius: 12px;
+  background:#ffffff;
+  outline: 3px solid #c79a2b1a;           /* faint gold outline */
+  box-shadow: inset 0 0 0 2px #c79a2b;    /* gold frame */
+}
+#vm-spirit blockquote {
+  margin: 0;
+  font-size: clamp(1.15rem, 1vw + 1rem, 1.6rem);
+  line-height: 1.6;
+  color:#0f2556; /* navy */
+  font-style: italic;
+}
+#vm-spirit figcaption {
+  font-weight: 700;
+  letter-spacing: .02em;
+  color:#0f2556;
+  text-transform: uppercase;
+  font-size: .9rem;
+  opacity:.85;
+}
+
+#vm-spirit .spirit-nav {
+  position:absolute; top:50%; translate:0 -50%;
+  width:40px; height:40px; border-radius:999px; border:0;
+  background:rgba(0,0,0,.06);
+  cursor:pointer; font-size:22px; line-height:40px; text-align:center;
+}
+#vm-spirit .spirit-prev { left:8px; }
+#vm-spirit .spirit-next { right:8px; }
+#vm-spirit .spirit-nav:hover { background:rgba(0,0,0,.12); }
+
+#vm-spirit .spirit-dots {
+  display:flex; justify-content:center; gap:8px; margin-top:12px;
+}
+#vm-spirit .spirit-dot {
+  width:8px; height:8px; border-radius:999px; border:0; cursor:pointer;
+  background:#cfd8e3;
+}
+#vm-spirit .spirit-dot.is-active { background:#c79a2b; }
+
+/* Two-column layout for the “What We Can Help With” section */
+.help-grid{
+  display:grid;
+  gap:24px;
+  align-items:start;
+}
+@media (min-width: 992px){
+  .help-grid{
+    grid-template-columns: 1fr minmax(300px, 460px);
+  }
+}
+
+/* Image card with gentle 3D feel */
+.help-right{
+  margin:0;
+}
+.help-right img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  background: linear-gradient(145deg,#f8fafc,#e8edf3);
+  border:1px solid #e5e7eb;
+  padding:12px;
+  /* 3D tilt and soft depth */
+  transform: perspective(1200px) rotateY(-7deg) rotateX(3deg);
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.14),
+    0 28px 60px rgba(0,0,0,.10);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.help-right img:hover{
+  transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(-2px);
+  box-shadow:
+    0 16px 28px rgba(0,0,0,.18),
+    0 36px 72px rgba(0,0,0,.14);
+}
+
+/* Medigap: side-by-side video + image */
+.mg-two-up{
+  display:grid;
+  gap:24px;
+}
+@media (min-width: 992px){
+  .mg-two-up{
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
+  }
+}
+
+/* Card look with stronger 3D effect */
+.mg-card{
+  background:#fff;
+  border:3px solid #e8eef7;
+  border-radius:16px;
+  padding:12px;
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.16),
+    0 36px 72px rgba(0,0,0,.12);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.mg-card:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 34px rgba(0,0,0,.20),
+    0 44px 88px rgba(0,0,0,.14);
+}
+
+/* Responsive 16:9 video frame */
+.mg-ratio{
+  position:relative;
+  padding-top:56.25%;
+  overflow:hidden;
+  border-radius:12px;
+}
+.mg-ratio iframe{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  border:0;
+}
+
+/* Image inside the card */
+.mg-card img{
+  display:block;
+  width:50%;
+  height:auto;
+  border-radius:12px;
+}
+
+@media (min-width: 992px){
+  #medigap-intro .mg-two-up > .mg-card:nth-child(2){
+    max-width: 1420px;  /* adjust here */
+    justify-self: end;
+  }
+}
+
+/* ---- Flip-book card ---- */
+#medigap-intro .mg-book{
+  /* keep it a bit smaller than the video */
+  max-width: 420px;
+  justify-self: end;
+}
+
+#medigap-intro .book-view{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;             /* square; change to 4/3 if you prefer */
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  perspective: 1200px;
+}
+
+#medigap-intro .book-img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#medigap-intro .page-turn{
+  position:absolute; inset:0;
+  background: #fff;
+  border-radius: 12px;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.16),
+    0 36px 72px rgba(0,0,0,.12);
+  transition: transform .7s cubic-bezier(.2,.6,.2,1), box-shadow .7s;
+  pointer-events: none;
+  /* subtle page shading */
+  background-image:
+    linear-gradient(90deg, rgba(0,0,0,.15), rgba(0,0,0,0) 30%),
+    linear-gradient(180deg, #fff, #f8fafc);
+}
+
+#medigap-intro .mg-book.turning .page-turn{
+  transform: rotateY(-180deg);
+  box-shadow:
+    -12px 12px 28px rgba(0,0,0,.20),
+    -28px 36px 72px rgba(0,0,0,.14);
+}
+
+/* controls */
+#medigap-intro .book-controls{
+  display:flex; gap:10px; justify-content:center; margin-top:10px;
+}
+#medigap-intro .book-controls button{
+  border:0; border-radius:10px; padding:8px 12px; font-size:20px;
+  background:#e8eef7; cursor:pointer;
+  box-shadow:0 6px 16px rgba(0,0,0,.10);
+}
+#medigap-intro .book-controls button:active{ transform: translateY(1px); }
+
+/* stack nicely on mobile */
+@media (max-width: 991px){
+  #medigap-intro .mg-book{ max-width: 520px; justify-self: stretch; }
+}
+
+/* Medigap intro – right image card frame */
+#medigap-intro .mg-two-up figure.mg-card{
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(11,42,58,.12);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* keep the picture large enough but not overflowing */
+#medigap-intro .mg-two-up figure.mg-card img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 720px;      /* tweak if you want it bigger/smaller */
+  max-height: 460px;     /* keeps it from getting giant */
+  object-fit: contain;
+  border-radius: 12px;   /* soft corners inside the frame */
+}
+
+/* stop accidental black backgrounds on any embedded players */
+.vm iframe,
+.mg-ratio iframe,
+iframe {
+  background: transparent !important;
+}
+
+.mg-ratio { position: relative; }  /* already present, just ensuring */
+.unmute-btn{
+  position:absolute; right:12px; bottom:12px;
+  z-index: 5;
+  background:#fff; color:#0b2a3a; font-weight:700;
+  border:0; border-radius:999px; padding:10px 14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.16); cursor:pointer;
+}
+.unmute-btn:focus{ outline:3px solid #9e0853; outline-offset:2px; }
+
+/* --- Flip card for the right image --- */
+.flip-card{ position:relative; perspective:1200px; }
+.flip-card .flip-inner{
+  position:relative;
+  width:100%;
+  aspect-ratio: 4 / 3;            /* adjust to 1/1 if you prefer square */
+  transform-style:preserve-3d;
+  transition: transform .6s cubic-bezier(.2,.6,.2,1);
+}
+.flip-card .flip-face{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit: contain;
+  border-radius:12px;
+  backface-visibility:hidden;
+}
+.flip-card .flip-face.back{ transform: rotateY(180deg); }
+
+/* flip on hover (desktop) and when JS toggles the class */
+.flip-card:hover .flip-inner,
+.flip-card.is-flipped .flip-inner{ transform: rotateY(180deg); }
+
+/* small overlay button for taps/mobiles */
+.flip-btn{
+  position:absolute; right:12px; bottom:12px;
+  z-index:5;
+  background:#fff; color:#0b2a3a; font-weight:700;
+  border:0; border-radius:999px; padding:8px 12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.16);
+  cursor:pointer;
+}
+.flip-btn:focus{ outline:3px solid #9e0853; outline-offset:2px; }
+
+/* Medigap intro: make the right flip image smaller and align it to the edge */
+#medigap-intro .vm-comic{
+  max-width: 500px;     /* ← change to 420px if you want smaller */
+  width: 100%;
+  justify-self: end;     /* hugs the right side on desktop */
+}
+
+#medigap-intro .vm-comic img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* On phones/tablets, let it be full width again */
+@media (max-width: 991px){
+  #medigap-intro .vm-comic{
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}

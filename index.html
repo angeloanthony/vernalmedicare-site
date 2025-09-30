@@ -17,6 +17,9 @@
   <meta property="og:title" content="Serving Medicare Recipients in the Uintah Basin | Vernal Medicare">
   <meta property="og:description" content="Local, licensed help with Medicare and under-65 health insurance in Vernal and the Uintah Basin.">
   <meta property="og:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
+  <meta property="og:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Vernal Medicare">
 
   <!-- Twitter -->
@@ -24,7 +27,7 @@
   <meta name="twitter:title" content="Medicare & Health Insurance in Vernal, Utah | Vernal Medicare">
   <meta name="twitter:description" content="Local, licensed help with Medicare and under-65 health insurance in the Uintah Basin.">
   <meta name="twitter:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
-
+  <meta name="twitter:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
@@ -41,62 +44,48 @@
   </script>
 
   <!-- Structured data -->
- <script type="application/ld+json">
+<script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness","InsuranceAgency"],
-  "@id": "https://vernalmedicare.com/#business",
-  "name": "Vernal Medicare",
-  "url": "https://vernalmedicare.com/",
-  "logo": "https://vernalmedicare.com/pictures/Rocco.webp",
-  "image": "https://vernalmedicare.com/pictures/vernalmedicare.webp",
-  "description": "Local, licensed Medicare help in Vernal and the Uintah Basin. Compare Medicare Advantage, Medigap, and Part D with a local agent.",
-  "telephone": "+1-435-219-5120",
-  "email": "rocco@medicareadvocates.com",
-  "areaServed": [
+  "@context":"https://schema.org",
+  "@type":["LocalBusiness","InsuranceAgency"],
+  "@id":"https://vernalmedicare.com/#business",
+  "name":"Vernal Medicare",
+  "url":"https://vernalmedicare.com/",
+  "logo":"https://vernalmedicare.com/pictures/Rocco.webp",
+  "image":"https://vernalmedicare.com/pictures/vernalmedicare.webp",
+  "description":"Local, licensed Medicare help in Vernal and the Uintah Basin. Compare Medicare Advantage, Medigap, and Part D with a local agent.",
+  "telephone":"+1-435-219-5120",
+  "email":"rocco@medicareadvocates.com",
+  "areaServed":[
     {"@type":"AdministrativeArea","name":"Vernal"},
     {"@type":"AdministrativeArea","name":"Naples"},
     {"@type":"AdministrativeArea","name":"Maeser"},
     {"@type":"AdministrativeArea","name":"Uintah County"}
   ],
-  "address": {
-  "@type": "PostalAddress",
-  "streetAddress": "2191 W Hwy 40 (inside Smith Pharmacy)",
-  "addressLocality": "Vernal",
-  "addressRegion": "UT",
-  "postalCode": "84078",
-  "addressCountry": "US"
-},
-"geo": {
-  "@type": "GeoCoordinates",
-  "latitude": 40.455,
-  "longitude": -109.528
-},
-  "openingHoursSpecification": [{
-    "@type":"OpeningHoursSpecification",
-    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens":"09:00",
-    "closes":"18:00"
-  }],
-  "hasMap": "https://www.google.com/maps?q=Smith%27s%20Pharmacy%2C%20Vernal%2C%20UT%2084078",
-"containedInPlace": {
-  "@type": "Pharmacy",
-  "name": "Smith's Pharmacy",
-  "address": { "@type": "PostalAddress", "addressLocality": "Vernal", "addressRegion": "UT", "postalCode": "84078", "addressCountry": "US" }
-},
-  "knowsAbout": [
-    "Medicare Advantage",
-    "Medigap",
-    "Part D",
-    "Medicare enrollment",
-    "Uintah Basin providers"
-  ],
-  "serviceArea": {
-    "@type":"AdministrativeArea",
-    "name":"Uintah Basin"
-  }
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"1080 W Hwy 40 (inside Smith's Pharmacy)",
+    "addressLocality":"Vernal",
+    "addressRegion":"UT",
+    "postalCode":"84078",
+    "addressCountry":"US"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.455,"longitude":-109.528},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],
+  "hasMap":"https://www.google.com/maps?q=Smith%27s%20Pharmacy%2C%20Vernal%2C%20UT%2084078",
+  "containedInPlace":{"@type":"Pharmacy","name":"Smith's Pharmacy","address":{"@type":"PostalAddress","addressLocality":"Vernal","addressRegion":"UT","postalCode":"84078","addressCountry":"US"}},
+  "knowsAbout":["Medicare Advantage","Medigap","Part D","Medicare enrollment","Uintah Basin providers"],
+  "serviceArea":{"@type":"AdministrativeArea","name":"Uintah Basin"},
+  "priceRange":"$$",
+  "founder":"Rocco DeLuca",
+  "sameAs":[
+    "https://vernalmedicare.com/",
+    "https://www.facebook.com/VernalMedicare",
+    "https://www.google.com/maps?q=Smith%27s%20Pharmacy,+1080+W+Highway+40,+Vernal,+UT+84078"
+  ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -184,9 +173,11 @@
   <!-- Hero -->
   <section class="hero-row">
     <div class="hero-image-wrapper">
-      <img src="pictures/vernalmedicare.webp" alt="Medicare & health insurance help in Vernal, Utah" "VernalMedicare.com — Medicare & health insurance help in Vernal, Utah" class="hero-banner" loading="eager" decoding="async" fetchpriority="high">
+      <img src="pictures/vernalmedicare.webp"
+     alt="Medicare & health insurance help in Vernal, Utah"
+     width="1600" height="600" class="hero-banner" loading="eager" decoding="async" fetchpriority="high">
       <div class="hero-text">
-        <h1>Serving the Uintah Basin</h1>
+        <h1>Serving Vernal and the Uintah Basin</h1>
         <p>Compare Medicare Advantage and Part D Plans</p>
        <a href="https://www.sunfirematrix.com/app/consumer/medicareadvocates/10569110/"
    class="enroll-btn"
@@ -250,7 +241,7 @@
 
   <!-- Welcome / What We Do -->
   <section class="welcome">
-    <h1>Take Advantage of the Advantage Plan, Cap Your Spending.</h1>
+    <h2>Take Advantage of the Advantage Plan, Cap Your Spending.</h2>
     <h3>Click the cartoon below</h3>
   <div class="vm2-up">
   <div class="vm">
@@ -270,13 +261,11 @@
     alt="Medicare marketing joke — dental add-on"
     loading="lazy">
 </a>
-
-
 </div>
-
+</section>
 
 <section id="vm-reviews" aria-label="Client reviews">
-  <div class="vm-reviews__track">
+ <div class="vm-reviews__track" aria-live="polite">
   <!-- Slide 1 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
@@ -466,14 +455,15 @@
 </div>
 
 
-  <button class="vm-reviews__nav vm-reviews__prev" aria-label="Previous review">‹</button>
-  <button class="vm-reviews__nav vm-reviews__next" aria-label="Next review">›</button>
+<button type="button" class="vm-reviews__nav vm-reviews__prev" aria-label="Previous review">‹</button>
+<button type="button" class="vm-reviews__nav vm-reviews__next" aria-label="Next review">›</button>
+
   <div class="vm-reviews__dots" role="tablist" aria-label="Review navigation dots"></div>
 </section>
 
 
 <script defer src="https://player.vimeo.com/api/player.js"></script>
-
+<section class="help">
     <div class="container">      
       <h2>Simple, Local Help with Your Coverage</h2>
       <p>We help you compare plans, enroll, and understand your benefits — at no extra cost to you.</p>
@@ -508,9 +498,7 @@
          loading="lazy" decoding="async" />
   </figure>
 </div>
-
-      </p>
-    </div>
+  </div>
   </section>
 
   <!-- Smile Carousel -->
@@ -648,7 +636,7 @@
       </figure>
     </div>
 
-    <button class="spirit-nav spirit-next" aria-label="Next thought">›</button>
+   <button type="button" class="spirit-nav spirit-next" aria-label="Next thought">›</button>
   </div>
 
   <div class="spirit-dots" role="tablist" aria-label="Thought navigation"></div>

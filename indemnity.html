@@ -68,33 +68,43 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
-  <header class="main-header">
-    <div class="container header-top">
-      <div class="site-name-center">
-        <a href="index.html" class="site-name">Vernal Medicare</a>
-      </div>
+<header class="main-header">
+  <div class="container header-top">
+    <!-- left spacer: keeps the center truly centered; no photo here -->
+    <div class="logo-left" aria-hidden="true"></div>
 
-      <!-- Mobile toggle -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-      </label>
-
-      <nav class="main-nav">
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="medigap.html">Medigap</a></li>
-          <li><a href="aca.html">Under-65 Health Insurance</a></li>
-          <li><a href="indemnity.html" class="active" aria-current="page">Copay Coverage</a></li>
-          <li><a href="life.html">Life Insurance</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+    <!-- centered brand -->
+    <div class="site-name-center">
+      <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
+        <picture>
+          <source srcset="pictures/medicare-simplified.webp" type="image/webp">
+          <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
+        </picture>
+      </a>
     </div>
-  </header>
+
+    <!-- Mobile toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </label>
+
+    <!-- Nav -->
+    <nav class="main-nav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medigap.html">Medigap</a></li>
+        <li><a href="aca.html">Under-65 Health Insurance</a></li>
+        <li><a href="indemnity.html" class="active" aria-current="page">Copay Coverage</a></li>
+        <li><a href="life.html">Life Insurance</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
 <main id="content">
   <section class="container" id="medigap-intro">

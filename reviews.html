@@ -70,69 +70,130 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
-  <header class="main-header">
-    <div class="container header-top">
-      <div class="site-name-center">
-        <a href="index.html" class="site-name">Vernal Medicare</a>
-      </div>
+ <header class="main-header">
+  <div class="container header-top">
+    <!-- left spacer for balance -->
+    <div class="logo-left" aria-hidden="true"></div>
 
-      <!-- Mobile toggle -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-      </label>
-
-      <nav class="main-nav">
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="medigap.html">Medigap</a></li>
-          <li><a href="aca.html">Under-65 Health Insurance</a></li>
-          <li><a href="copay.html">Copay Coverage</a></li>
-          <li><a href="life.html">Life Insurance</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="reviews.html" class="active" aria-current="page">Reviews</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+    <!-- centered brand -->
+    <div class="site-name-center">
+      <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
+        <picture>
+          <source srcset="pictures/medicare-simplified.webp" type="image/webp">
+          <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
+        </picture>
+      </a>
     </div>
-  </header>
+
+    <!-- mobile toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </label>
+
+    <!-- nav -->
+    <nav class="main-nav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medigap.html">Medigap</a></li>
+        <li><a href="aca.html">Under-65 Health Insurance</a></li>
+        <li><a href="indemnity.html">Copay Coverage</a></li>
+        <li><a href="life.html">Life Insurance</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="reviews.html" class="active" aria-current="page">Reviews</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <main id="content" class="container">
   <section>
     <h1>What Clients Say</h1>
     <p>We’re grateful for every kind word. Here are public posts and reviews.</p>
     <p class="text-center">
-      <a class="button" href="https://www.facebook.com/VernalMedicare/" target="_blank" rel="noopener">Write a Facebook Review</a>
+<a class="button"
+   href="https://www.facebook.com/VernalMedicare/reviews/?ref=page_internal"
+   target="_blank" rel="noopener">
+  Write a Facebook Review
+</a>
+
       <a class="button" href="https://www.instagram.com/vernalmedicare/" target="_blank" rel="noopener">Message us on Instagram</a>
     </p>
   </section>
 
-  <section class="reviews">
-    <h2>Latest Reviews</h2>
-    <div class="embed-grid">
-      <!-- Facebook Page Plugin (timeline) -->
-      <div class="embed">
-        <div class="fb-page"
-             data-href="https://www.facebook.com/VernalMedicare/"
-             data-tabs="timeline"
-             data-width="500"
-             data-hide-cover="false"
-             data-show-facepile="true"></div>
-      </div>
+ <section class="reviews">
+  <h2>Latest Reviews</h2>
+<section class="reviews">
+  <h2>Latest Reviews</h2>
 
-      <!-- Optional static card -->
+  <!-- Facebook Page Plugin (optional, you can keep/remove) -->
+  <div class="fb-page"
+       data-href="https://www.facebook.com/VernalMedicare/"
+       data-tabs="timeline"
+       data-width="500"
+       data-hide-cover="false"
+       data-show-facepile="true"></div>
+
+  <!-- Static Review Card -->
+  <figure class="review-card">
+    <blockquote>“Rocco is patient and clear. He saved us money and made the process easy.”</blockquote>
+    <figcaption>— Local client</figcaption>
+  </figure>
+
+  <!-- Instagram placeholder -->
+  <p><a href="https://www.instagram.com/vernalmedicare/" target="_blank" rel="noopener">See our Instagram</a></p>
+
+  <!-- NEW: Smith Pharmacy Picture -->
+  <div class="smith-photo">
+    <img src="pictures/rocco (2).webp" alt="Smith Pharmacy - Vernal" loading="lazy">
+  </div>
+</section>
+
+<style>
+.smith-photo {
+  text-align: center;
+  margin-top: 20px;
+}
+.smith-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+</style>
+
+  <div class="rev-row">
+    <!-- LEFT: Facebook timeline (iframe, not SDK) -->
+    <div class="rev-col rev-left">
+     <!-- Facebook Page (no posts) -->
+<div class="fb-wrap">
+  <iframe
+    title="Vernal Medicare — Facebook"
+    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FVernalMedicare%2F&tabs=&width=800&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
+    width="800" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
+</div>
+
+
+    </div>
+
+    <!-- RIGHT: quote + link -->
+    <div class="rev-col rev-right">
       <figure class="review-card">
         <blockquote>“Rocco is patient and clear. He saved us money and made the process easy.”</blockquote>
         <figcaption>— Local client</figcaption>
       </figure>
 
-      <!-- Instagram placeholder -->
-      <div class="embed">
-        <p><a href="https://www.instagram.com/vernalmedicare/" target="_blank" rel="noopener">See our Instagram</a></p>
-      </div>
+      <a class="review-card" href="https://www.instagram.com/vernalmedicare/" target="_blank" rel="noopener">
+        See our Instagram
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Disclosures -->
   <section>
@@ -162,7 +223,6 @@
 
   <!-- Facebook SDK (needed for embed) -->
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"></script>
 
   <!-- Tiny active-nav helper + year -->
   <script>

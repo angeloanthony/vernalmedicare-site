@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vernalmedicare.com/sitemap.xml
+# Block common junk (optional)
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+
+# Sitemap location
+Sitemap: https://vernalmedicare.com/sitemap.xml

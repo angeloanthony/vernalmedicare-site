@@ -66,27 +66,29 @@
     "postalCode": "84078",
     "addressCountry": "US"
   },
+
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 40.455,
-    "longitude": -109.528
+    "latitude": 40.4527277,
+    "longitude": -109.5478186
   },
 
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    }
-  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }],
 
   "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Vernal" },
-    { "@type": "AdministrativeArea", "name": "Naples" },
-    { "@type": "AdministrativeArea", "name": "Maeser" },
-    { "@type": "AdministrativeArea", "name": "Uintah County" }
+    "Vernal",
+    "Naples",
+    "Maeser",
+    "Jensen",
+    "Uintah County",
+    "Uintah Basin"
   ],
+
   "serviceArea": { "@type": "AdministrativeArea", "name": "Uintah Basin" },
 
   "containedInPlace": {
@@ -94,14 +96,15 @@
     "name": "Smith's Pharmacy",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "1080 W Hwy 40",
       "addressLocality": "Vernal",
       "addressRegion": "UT",
       "postalCode": "84078",
       "addressCountry": "US"
-    }
+    },
+    "hasMap": "https://www.google.com/maps?cid=5192524098518186165",
+    "sameAs": ["https://www.google.com/maps?cid=5192524098518186165"]
   },
-
-  "hasMap": "https://www.google.com/maps?q=Smith%27s%20Pharmacy%2C%20Vernal%2C%20UT%2084078",
 
   "knowsAbout": [
     "Medicare Advantage",
@@ -123,9 +126,35 @@
   },
 
   "sameAs": [
+    "https://www.facebook.com/VernalMedicare"
+    /* Add Yelp/Bing/Chamber profiles here when live; do NOT include your homepage */
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "name": [
+    "Home",
+    "Medigap",
+    "Under-65 Health Insurance",
+    "Copay Coverage",
+    "Life Insurance",
+    "FAQ",
+    "Reviews",
+    "About"
+  ],
+  "url": [
     "https://vernalmedicare.com/",
-    "https://www.facebook.com/VernalMedicare",
-    "https://www.google.com/maps?q=Smith%27s%20Pharmacy,+1080+W+Highway+40,+Vernal,+UT+84078"
+    "https://vernalmedicare.com/medigap.html",
+    "https://vernalmedicare.com/aca.html",
+    "https://vernalmedicare.com/indemnity.html",
+    "https://vernalmedicare.com/life.html",
+    "https://vernalmedicare.com/faq.html",
+    "https://vernalmedicare.com/reviews.html",
+    "https://vernalmedicare.com/about.html"
   ]
 }
 </script>
@@ -188,10 +217,7 @@
   ]
 }
 </script>
-
-
-
-  </head>
+</head>
 
 <body>
   <!-- Top Bar -->

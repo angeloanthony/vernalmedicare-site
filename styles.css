@@ -131,7 +131,7 @@ p {
   font-weight: 900;
   color: #002b49;
   margin: 0;
-  white-space: nowrap;   /* <- prevents breaking */
+  white-space: wrap;   /* <- prevents breaking */
 }
 
 /* Navigation */
@@ -290,24 +290,29 @@ p {
   color: #002b49;
   padding: 16px 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  box-shadow: 0 8px 24px rgba(217, 212, 212, 0.12);
 }
 
 /* Desktop: float the card into the picture, centered near the bottom */
 @media (min-width: 769px){
-  .hero-row .hero-text{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: min(100%, 1600px);     /* your current value is fine */
-    max-width: none !important;   /* ← override the 900px cap */
-    padding: 14px 18px;
-    background: rgba(44,62,80,.46);
-    color: #fff;
-    border-radius: 8px;
-    margin: 0;                    /* (optional) cancel mobile margin */
-  }
+ .hero-row .hero-text{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2px;
+
+  /* keep the shaded card from stretching across the whole hero */
+  width: auto;
+  max-width: 860px;         /* tweak 720–960px as you like */
+
+  padding: 14px 18px;
+  background: rgba(152, 155, 158, 0.46);
+  color: #fff;
+  border-radius: 10px;
+  margin: 0;
+  box-shadow: 0 8px 24px rgba(140, 136, 136, 0.28);
+}
+
 
   /* … your h1/p rules are already set to max-width:none */
 }
@@ -320,7 +325,7 @@ p {
     line-height: 1.15;
     max-width: none !important;    /* ← remove the 34ch cap */
     margin: 0 0 .35rem;
-    white-space: nowrap;
+    white-space: wrap;
   }
 
 /* Body text bigger & more readable on desktop */
@@ -331,7 +336,7 @@ p {
   line-height: 1.48;                                   /* was 1.35 */
   margin: 0 0 .6rem;
   max-width: none !important;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
   /* Shorter button inside hero only */
@@ -1092,8 +1097,9 @@ main {
   will-change: transform;
 }
 
-.logo-left img:hover{
-  transform: scale(1.8) rotate(-1deg);
+/* Only zoom non-avatar images (keeps the headshot sane) */
+.logo-left img:not(.logo-avatar):hover{
+  transform: scale(1.05) rotate(-1deg);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
@@ -1733,42 +1739,55 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
 }
 #vm-spirit .spirit-dot.is-active { background:#c79a2b; }
 
-/* Two-column layout for the “What We Can Help With” section */
+/* Help (two-column card, cleaner spacing) */
+.help .container{
+  max-width: 1100px;
+  margin: 24px auto;
+  background:#fff;
+  border-radius:12px;
+  padding: clamp(16px,2vw,28px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
 .help-grid{
   display:grid;
-  gap:24px;
+  grid-template-columns: 1fr;                   /* mobile first */
+  gap: clamp(16px,2vw,28px);
   align-items:start;
 }
+
 @media (min-width: 992px){
   .help-grid{
-    grid-template-columns: 1fr minmax(300px, 460px);
+    grid-template-columns: minmax(360px,1fr) minmax(360px,480px);
+    align-items:center;
   }
 }
 
-/* Image card with gentle 3D feel */
-.help-right{
-  margin:0;
-}
+/* Left column: comfortable line length & lists */
+.help-left{ max-width: 720px; }
+.help-left h3{ margin:.25rem 0 .5rem; font-size:1.25rem; color:#0b2a3a; }
+.help-left ol, .help-left ul{ margin:.5rem 0 .75rem 1.25rem; }
+.help-left li{ margin:.25rem 0; line-height:1.6; }
+
+/* Right column: image card, capped size */
+.help-right{ margin:0; }
 .help-right img{
   width:100%;
   height:auto;
+  max-width: clamp(340px, 42vw, 520px);        /* keeps it from overpowering */
   border-radius:16px;
   background: linear-gradient(145deg,#f8fafc,#e8edf3);
   border:1px solid #e5e7eb;
   padding:12px;
-  /* 3D tilt and soft depth */
-  transform: perspective(1200px) rotateY(-7deg) rotateX(3deg);
-  box-shadow:
-    0 12px 24px rgba(0,0,0,.14),
-    0 28px 60px rgba(0,0,0,.10);
-  transition: transform .35s ease, box-shadow .35s ease;
+  transform: perspective(1200px) rotateY(-5deg) rotateX(2deg);
+  box-shadow: 0 12px 24px rgba(0,0,0,.14), 0 28px 60px rgba(0,0,0,.10);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 .help-right img:hover{
   transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(-2px);
-  box-shadow:
-    0 16px 28px rgba(0,0,0,.18),
-    0 36px 72px rgba(0,0,0,.14);
+  box-shadow: 0 16px 28px rgba(0,0,0,.18), 0 36px 72px rgba(0,0,0,.14);
 }
+
 
 /* Medigap: side-by-side video + image */
 .mg-two-up{
@@ -1996,33 +2015,56 @@ iframe {
   z-index: 5;
 }
 
-/* Two-column layout on desktop */
-.local-nap .nap-grid {
-  display: grid;
-  gap: 32px;
-  align-items: start;
+/* --- Local NAP (decluttered) --- */
+.local-nap{ padding:22px 0 10px; margin-bottom:26px; }
+
+.local-nap .nap-grid{
+  display:grid;
+  grid-template-columns:560px minmax(0,1fr);
+  gap:28px 34px;
+  align-items:start;
 }
 
-@media (min-width: 900px) {
-  .local-nap .nap-grid {
-    grid-template-columns: 1fr 1fr; /* side by side */
-  }
-  .local-nap .nap-info { text-align: left; }
+@media (max-width:1100px){
+  .local-nap .nap-grid{ grid-template-columns:1fr; }
 }
 
-@media (max-width: 899px) {
-  .local-nap .nap-grid { grid-template-columns: 1fr; text-align: center; }
-  .local-nap .nap-points { text-align: left; display: inline-block; }
+/* Card look on both sides */
+.local-nap .nap-info,
+.local-nap .map-wrap{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:16px 18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
-.local-nap .map-wrap {
-  box-shadow: 0 6px 18px rgba(0,0,0,.1);
-  border-radius: 12px;
-  overflow: hidden;
+.local-nap .nap-info h2{
+  margin:2px 0 8px;
+  font-size:clamp(1.4rem,1.2vw + 1rem,1.75rem);
 }
-.local-nap .map-wrap iframe { display:block; width:100%; border:0; }
-.local-nap .nap-ctas { margin: 14px 0; }
-.local-nap .nap-points { margin: 12px 0; padding-left: 20px; }
+
+.local-nap .nap-info p{ margin:6px 0; }
+
+/* Bullets and buttons */
+.local-nap .nap-points{ margin:10px 0 8px; padding-left:18px; }
+.local-nap .nap-points li{ margin:6px 0; }
+
+.local-nap .nap-ctas{
+  display:flex; flex-wrap:wrap; gap:10px;
+  margin-top:12px;
+}
+.local-nap .nap-ctas .button{ padding:10px 16px; }
+
+/* Map frame */
+.local-nap .map-wrap{ padding:10px; }
+.local-nap .map-wrap iframe{
+  display:block; width:100%; height:360px;
+  border:0; border-radius:10px;
+}
+.local-nap .map-wrap figcaption{
+  font-size:.92rem; color:#334155; margin-top:6px; opacity:.9;
+}
 
 .local-internal {
   margin: 24px auto 0 auto;
@@ -2061,3 +2103,40 @@ iframe {
   border-radius: 8px;
   background: #fafafa;
 }
+/* Avatar: contained in circle by default */
+.logo-left{
+  width: 96px;
+  height: 96px;
+  border-radius: 9999px;
+  overflow: hidden;       /* contain image inside circle */
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.logo-left img.logo-avatar{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* keep full image visible */
+  object-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On hover: let it expand outside the circle */
+.logo-left:hover{
+  overflow: visible;      /* remove clipping so image can "escape" */
+}
+
+.logo-left:hover img.logo-avatar{
+  transform: scale(1.4);  /* expand freely */
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  z-index: 10;
+}
+
+@media (max-width:768px){
+  .logo-left{
+    width: 56px;
+    height: 56px;
+  }
+}
+

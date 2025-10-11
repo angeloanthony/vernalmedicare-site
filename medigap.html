@@ -7,31 +7,33 @@
 
   <title>Medigap (Medicare Supplement) in Vernal, Utah | Vernal Medicare</title>
   <meta name="description" content="Compare Medigap plans in Vernal and the Uintah Basin. Local, licensed help choosing a Medicare Supplement that fits your doctors and budget.">
-  <link rel="canonical" href="https://vernalmedicare.com/medigap/">
+  <link rel="canonical" href="https://vernalmedicare.com/medigap.html">
 
   <!-- Verification -->
   <meta name="google-site-verification" content="7TnQ_J9i53PFlwcNw1vzvpyX_9giOLNRbT79H7t6-jA">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vernalmedicare.com/medigap/">
+  <meta property="og:url" content="https://vernalmedicare.com/medigap.html">
   <meta property="og:title" content="Medigap (Medicare Supplement) in Vernal, Utah | Vernal Medicare">
   <meta property="og:description" content="Local, licensed help comparing Medigap plans in Vernal and the Uintah Basin.">
-  <meta property="og:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
+  <meta property="og:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Vernal Medicare">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Medigap (Medicare Supplement) in Vernal, Utah | Vernal Medicare">
   <meta name="twitter:description" content="Local, licensed help comparing Medigap plans in Vernal and the Uintah Basin.">
-  <meta name="twitter:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
+  <meta name="twitter:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
 
   <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW6ENB89NF"></script>
@@ -42,7 +44,7 @@
     gtag('config', 'G-NW6ENB89NF', { anonymize_ip: true });
   </script>
 
-  <!-- Structured data (keep org site-wide; add page-specific as desired) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,7 +56,46 @@
     "telephone": "+1-435-219-5120",
     "email": "rocco@medicareadvocates.com",
     "areaServed": "Uintah County, Utah",
-    "address": { "@type": "PostalAddress", "addressLocality": "Vernal", "addressRegion": "UT", "addressCountry": "US" }
+    "address": { 
+      "@type": "PostalAddress", 
+      "addressLocality": "Vernal", 
+      "addressRegion": "UT", 
+      "postalCode": "84078",
+      "addressCountry": "US" 
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is Medigap?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Medigap (Medicare Supplement) helps pay the costs Original Medicare doesn't, like deductibles, copays, and coinsurance. You keep Original Medicare and can see any provider who accepts Medicare."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Does Medigap include drug coverage?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. Most people add a separate Part D plan for prescriptions."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"When can I enroll?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Your best time is the first 6 months you're 65 or older and have Part B—no health questions in most states. After that you can apply anytime, but medical underwriting may apply."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -71,26 +112,31 @@
   <!-- Header / Nav -->
   <header class="main-header">
     <div class="container header-top">
-<div class="site-name-center">
-  <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
-    <picture>
-      <source srcset="pictures/medicare-simplified.webp" type="image/webp">
-      <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
-    </picture>
-  </a>
-</div>
+      <div class="logo-left">
+        <a href="index.html">
+          <img src="pictures/Rocco.webp" alt="Rocco DeLuca — Vernal Medicare">
+        </a>
+      </div>
 
+      <div class="site-name-center">
+        <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
+          <picture>
+            <source srcset="pictures/medicare-simplified.webp" type="image/webp">
+            <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
+          </picture>
+        </a>
+      </div>
 
       <!-- Mobile toggle -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
+      <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
         <span></span>
       </label>
 
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav">
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="medigap.html" class="active" aria-current="page">Medigap</a></li>
+          <li><a href="medigap.html" aria-current="page">Medigap</a></li>
           <li><a href="aca.html">Under-65 Health Insurance</a></li>
           <li><a href="indemnity.html">Copay Coverage</a></li>
           <li><a href="life.html">Life Insurance</a></li>
@@ -102,242 +148,234 @@
     </div>
   </header>
 
-<section class="container" id="medigap-intro">
-  <h2 style="margin:16px 0;">Medigap (Medicare Supplement) — Video</h2>
+  <section class="container" id="medigap-intro">
+    <h2 style="margin:16px 0;">Medigap (Medicare Supplement) — Video</h2>
 
-  <div class="mg-two-up">
-    <!-- LEFT: video card -->
-    <div class="mg-card">
-      <div class="mg-ratio">
-        <iframe
-          src="https://player.vimeo.com/video/1114438001?title=0&byline=0&portrait=0&dnt=1&autoplay=1&muted=1"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          loading="lazy"
-          title="Medigap Video"></iframe>
+    <div class="mg-two-up">
+      <!-- LEFT: video card -->
+      <div class="mg-card">
+        <div class="mg-ratio">
+          <iframe
+            src="https://player.vimeo.com/video/1114438001?title=0&byline=0&portrait=0&dnt=1&autoplay=1&muted=1"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            title="Medigap Video"></iframe>
+        </div>
       </div>
+
+      <!-- RIGHT: flip-on-click comic (3 images) -->
+      <a class="vm-comic" href="pictures/joke23.webp" target="_blank" rel="noopener">
+        <img
+          src="pictures/joke23.webp"
+          data-alt="pictures/joke21.webp"
+          data-alt2="pictures/joke11.webp"
+          alt="Medicare comic"
+          loading="lazy" decoding="async">
+      </a>
+    </div>
+  </section>
+
+  <!-- Smile Carousel -->
+  <section class="smile" aria-label="Medicare comics carousel">
+    <div class="smile-badge" aria-hidden="true" title="Smile!">
+      <img src="pictures/smile.webp" alt="" width="56" height="56" decoding="async">
     </div>
 
-    <!-- RIGHT: image card (use any image you like) -->
-   <!-- RIGHT: flip-on-click comic (3 images) -->
-<a class="vm-comic" href="pictures/joke23.webp" target="_blank" rel="noopener">
-  <img
-    src="pictures/joke23.webp"
-    data-alt="pictures/joke21.webp"
-    data-alt2="pictures/joke11.webp"
-    alt="Medicare comic"
-    loading="lazy" decoding="async">
-</a>
+    <div class="smile-wrap">
+      <button class="smile-arrow prev" aria-label="Previous comic" type="button">‹</button>
 
-  </div>
-</section>
+      <div class="smile-track" tabindex="0">
+        <!-- Slide 1 -->
+        <a class="smile-slide" href="pictures/joke63.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke63.webp" alt="Medicare marketing joke — dental add-ons">
+        </a>
 
+        <!-- Slide 2 -->
+        <a class="smile-slide" href="pictures/joke61.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke61.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-<!-- Smile Carousel -->
-<section class="smile" aria-label="Medicare comics carousel">
-  <div class="smile-badge" aria-hidden="true" title="Smile!">
-  <img src="pictures/smile.webp" alt="" width="56" height="56" decoding="async">
-</div>
+        <!-- Slide 3 -->
+        <a class="smile-slide" href="pictures/joke55.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke55.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-  <div class="smile-wrap">
-    <button class="smile-arrow prev" aria-label="Previous comic" type="button">‹</button>
+        <!-- Slide 4 -->
+        <a class="smile-slide" href="pictures/joke53.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke53.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-    <div class="smile-track" tabindex="0">
-      <!-- Slide 1 -->
-      <a class="smile-slide" href="pictures/joke63.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke63.webp" alt="Medicare marketing joke — dental add-ons">
-      </a>
+        <!-- Slide 5 -->
+        <a class="smile-slide" href="pictures/joke51.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke51.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-      <!-- Slide 2 -->
-      <a class="smile-slide" href="pictures/joke61.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke61.webp" alt="Part B vs Part C superhero parody">
-      </a>
+        <!-- Slide 6 -->
+        <a class="smile-slide" href="pictures/joke50.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke50.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-      <!-- Slide 3 -->
-      <a class="smile-slide" href="pictures/joke55.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke55.webp" alt="Part B vs Part C superhero parody">
-      </a>
+        <!-- Slide 7 -->
+        <a class="smile-slide" href="pictures/joke58.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke58.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-      <!-- Slide 4 -->
-      <a class="smile-slide" href="pictures/joke53.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke53.webp" alt="Part B vs Part C superhero parody">
-      </a>
+        <!-- Slide 8 -->
+        <a class="smile-slide" href="pictures/joke59.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke59.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-      <!-- Slide 5 -->
-      <a class="smile-slide" href="pictures/joke51.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke51.webp" alt="Part B vs Part C superhero parody">
-      </a>
+        <!-- Slide 9 -->
+        <a class="smile-slide" href="pictures/joke60.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke60.webp" alt="Part B vs Part C superhero parody">
+        </a>
 
-      <!-- Slide 6 -->
-      <a class="smile-slide" href="pictures/joke50.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke50.webp" alt="Part B vs Part C superhero parody">
-      </a>
+        <!-- Slide 10 -->
+        <a class="smile-slide" href="pictures/joke62.webp" target="_blank" rel="noopener">
+          <img src="pictures/joke62.webp" alt="Part B vs Part C superhero parody">
+        </a>
+      </div>
 
-      <!-- Slide 7 -->
-      <a class="smile-slide" href="pictures/joke58.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke58.webp" alt="Part B vs Part C superhero parody">
-      </a>
-
-      <!-- Slide 8 -->
-      <a class="smile-slide" href="pictures/joke59.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke59.webp" alt="Part B vs Part C superhero parody">
-      </a>
-
-      <!-- Slide 9 -->
-      <a class="smile-slide" href="pictures/joke60.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke60.webp" alt="Part B vs Part C superhero parody">
-      </a>
-
-      <!-- Slide 10 -->
-      <a class="smile-slide" href="pictures/joke61.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke61.webp" alt="Part B vs Part C superhero parody">
-      </a>
-
-      <!-- To add more: duplicate a slide block, change the image path + alt -->
-      <!--
-      <a class="smile-slide" href="pictures/joke4.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke4.webp" alt="Your third joke">
-      </a>
-      -->
+      <button class="smile-arrow next" aria-label="Next comic" type="button">›</button>
     </div>
-
-    <button class="smile-arrow next" aria-label="Next comic" type="button">›</button>
-  </div>
-</section>
+  </section>
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="current-year"></span> Vernal Medicare</p>
+      <p>© <span id="current-year"></span> Vernal Medicare. All rights reserved.</p>
       <p>Email: <a href="mailto:rocco@medicareadvocates.com">rocco@medicareadvocates.com</a> |
          Phone: <a href="tel:+14352195120">+1 (435) 219-5120</a></p>
+      <p style="font-size:.9rem;opacity:.9">
+        Not connected with or endorsed by the U.S. government or the federal Medicare program.
+        By calling this number, you will be connected to a licensed insurance agent/producer.
+      </p>
       <p><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
     </div>
-<p class="powered-by">
-  Powered by cozelosdata
-  <a href="https://cozelosdata.com/" target="_blank" rel="noopener" class="powered-link">
-    <picture>
-      <source srcset="pictures/cozelos.webp" type="image/webp">
-      <img src="pictures/cozelos.webp" alt="Cozelos Data" class="powered-logo" width="120" height="24" loading="lazy" decoding="async">
-    </picture>
-  </a>
-</p>
+    <p class="powered-by">
+      Powered by cozelosdata
+      <a href="https://cozelosdata.com/" target="_blank" rel="noopener noreferrer" class="powered-link">
+        <picture>
+          <source srcset="pictures/cozelos.webp" type="image/webp">
+          <img src="pictures/cozelos.webp" alt="Cozelos Data" class="powered-logo" width="120" height="24" loading="lazy" decoding="async">
+        </picture>
+      </a>
+    </p>
   </footer>
 
-  <!-- JSON-LD (structured data) -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "InsuranceAgency",
-  "name": "Vernal Medicare",
-  "url": "https://vernalmedicare.com/medigap.html",
-  "telephone": "+1-435-219-5120",
-  "email": "rocco@medicareadvocates.com",
-  "areaServed": "Uintah County, Utah",
-  "address": { "@type": "PostalAddress", "addressLocality": "Vernal", "addressRegion": "UT", "addressCountry": "US" }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is Medigap?","acceptedAnswer":{"@type":"Answer","text":"Medigap (Medicare Supplement) helps pay the costs Original Medicare doesn’t, like deductibles, copays, and coinsurance. You keep Original Medicare and can see any provider who accepts Medicare."}},
-    {"@type":"Question","name":"Does Medigap include drug coverage?","acceptedAnswer":{"@type":"Answer","text":"No. Most people add a separate Part D plan for prescriptions."}},
-    {"@type":"Question","name":"When can I enroll?","acceptedAnswer":{"@type":"Answer","text":"Your best time is the first 6 months you’re 65 or older and have Part B—no health questions in most states. After that you can apply anytime, but medical underwriting may apply."}}
-  ]
-}
-</script>
-
-  <!-- Tiny active-nav helper (optional if you already add class="active" by hand) -->
+  <!-- Scripts -->
   <script>
-    (function() {
-      const here = location.pathname.replace(/\/$/, '') || '/';
+    // Active-nav + year
+    (function () {
+      const hereRaw = location.pathname.replace(/\/$/, '') || '/';
+      const here = (hereRaw === '/index.html') ? '/' : hereRaw;
+
       document.querySelectorAll('.nav-menu a').forEach(a => {
-        const href = a.getAttribute('href');
-        const normalized = (href === 'index.html' || href === './' || href === '/') ? '/' : `/${href}`;
-        if (normalized.replace(/\/$/, '') === here.replace(/\/$/, '')) a.classList.add('active');
+        try {
+          const url = new URL(a.getAttribute('href'), location.origin);
+          const pathRaw = url.pathname.replace(/\/$/, '') || '/';
+          const path = (pathRaw === '/index.html') ? '/' : pathRaw;
+          const hasHash = url.hash && url.hash.length > 0;
+          a.classList.toggle('active', path === here && !hasHash);
+        } catch (e) {}
       });
-      const y = document.getElementById('current-year'); if (y) y.textContent = new Date().getFullYear();
+
+      const y = document.getElementById('current-year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+
+    // Mobile nav toggle
+    (function setupToggle() {
+      const toggleLabel = document.getElementById('nav-toggle-label');
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.querySelector('.main-nav');
+      if (!toggleLabel || !navToggle || !navMenu) return setTimeout(setupToggle, 100);
+      let isToggled = false;
+      function setState(on) {
+        isToggled = on;
+        navToggle.checked = on;
+        navMenu.style.cssText = on ? 'display:block!important' : 'display:none!important';
+        toggleLabel.classList.toggle('open', on);
+        toggleLabel.setAttribute('aria-expanded', on ? 'true' : 'false');
+      }
+      document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => setState(false)));
+      toggleLabel.addEventListener('click', () => setState(!isToggled));
+      toggleLabel.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setState(!isToggled); }
+      });
     })();
   </script>
-  <!-- 3CX Live Chat (auto-updates from PBX) -->
-<call-us-selector phonesystem-url="https://1888.3cx.cloud" party="LiveChat956014"></call-us-selector>
-<script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
 
-<script>
-(function(){
-  document.addEventListener('click', function(e){
-    const link = e.target.closest('.vm-comic');
-    if (!link) return;
+  <!-- 3CX Live Chat -->
+  <call-us-selector phonesystem-url="https://1888.3cx.cloud" party="LiveChat956014"></call-us-selector>
+  <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
 
-    // We’re flipping, not opening the image
-    e.preventDefault();
+  <script>
+  (function(){
+    document.addEventListener('click', function(e){
+      const link = e.target.closest('.vm-comic');
+      if (!link) return;
 
-    const img = link.querySelector('img');
-    if (!img) return;
+      e.preventDefault();
+      const img = link.querySelector('img');
+      if (!img) return;
 
-    // half-flip, then rotate sources, then unflip
-    img.classList.add('is-flipping');
+      img.classList.add('is-flipping');
 
-    const onEnd = function(){
-      img.removeEventListener('transitionend', onEnd);
+      const onEnd = function(){
+        img.removeEventListener('transitionend', onEnd);
 
-      // Current + alternates
-      const a = img.getAttribute('src');
-      const b = img.getAttribute('data-alt');   // optional
-      const c = img.getAttribute('data-alt2');  // optional (3rd)
+        const a = img.getAttribute('src');
+        const b = img.getAttribute('data-alt');
+        const c = img.getAttribute('data-alt2');
 
-      if (c) {
-        // 3-image rotation: a -> b -> c -> a
-        img.setAttribute('src', b || a);
-        img.setAttribute('data-alt', c || a);
-        img.setAttribute('data-alt2', a);
-      } else if (b) {
-        // 2-image swap: a <-> b
-        img.setAttribute('src', b);
-        img.setAttribute('data-alt', a);
-      }
+        if (c) {
+          // 3-image rotation: a -> b -> c -> a
+          img.setAttribute('src', b || a);
+          img.setAttribute('data-alt', c || a);
+          img.setAttribute('data-alt2', a);
+        } else if (b) {
+          // 2-image swap: a <-> b
+          img.setAttribute('src', b);
+          img.setAttribute('data-alt', a);
+        }
 
-      // keep link’s href in sync with the visible image
-      link.setAttribute('href', img.getAttribute('src'));
+        link.setAttribute('href', img.getAttribute('src'));
 
-      // let the browser settle, then unflip
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        img.classList.remove('is-flipping');
-      }));
-    };
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          img.classList.remove('is-flipping');
+        }));
+      };
 
-    img.addEventListener('transitionend', onEnd);
-  });
-})();
-</script>
+      img.addEventListener('transitionend', onEnd);
+    });
+  })();
+  </script>
 
-<script>
-(function(){
-  const wrap = document.querySelector('.smile-wrap');
-  if (!wrap) return;
-  const track = wrap.querySelector('.smile-track');
-  const prev  = wrap.querySelector('.smile-arrow.prev');
-  const next  = wrap.querySelector('.smile-arrow.next');
+  <script>
+  (function(){
+    const wrap = document.querySelector('.smile-wrap');
+    if (!wrap) return;
+    const track = wrap.querySelector('.smile-track');
+    const prev  = wrap.querySelector('.smile-arrow.prev');
+    const next  = wrap.querySelector('.smile-arrow.next');
 
-  function slideBy(dir){
-    const firstSlide = track.querySelector('.smile-slide');
-    if (!firstSlide) return;
-    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 16;
-    const w = firstSlide.getBoundingClientRect().width + gap;
-    track.scrollBy({ left: dir * w, behavior: 'smooth' });
-  }
+    function slideBy(dir){
+      const firstSlide = track.querySelector('.smile-slide');
+      if (!firstSlide) return;
+      const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 16;
+      const w = firstSlide.getBoundingClientRect().width + gap;
+      track.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
 
-  prev && prev.addEventListener('click', () => slideBy(-1));
-  next && next.addEventListener('click', () => slideBy(1));
+    prev && prev.addEventListener('click', () => slideBy(-1));
+    next && next.addEventListener('click', () => slideBy(1));
 
-  // Keyboard support when the track is focused
-  track.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { e.preventDefault(); slideBy(-1); }
-    if (e.key === 'ArrowRight'){ e.preventDefault(); slideBy(1); }
-  });
-})();
-</script>
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); slideBy(-1); }
+      if (e.key === 'ArrowRight'){ e.preventDefault(); slideBy(1); }
+    });
+  })();
+  </script>
 </body>
 </html>

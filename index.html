@@ -4,31 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Medicare in Vernal, Utah | Local Medicare Agent | Vernal Medicare</title>
-    <meta name="description" content="Local, licensed Medicare help in Vernal and the Uintah Basin. Compare Medicare Advantage (HMO/PPO), Medigap, and Part D with a local agent. Call 435-219-5120 for a free review.">
+  <meta name="description" content="Local, licensed Medicare help in Vernal and the Uintah Basin. Compare Medicare Advantage (HMO/PPO), Medigap, and Part D with a local agent. Call 435-219-5120 for a free review.">
 
   <link rel="canonical" href="https://vernalmedicare.com/">
 
-  <!-- Verification (keep) -->
+  <!-- Verification -->
   <meta name="google-site-verification" content="7TnQ_J9i53PFlwcNw1vzvpyX_9giOLNRbT79H7t6-jA">
+  <meta name="msvalidate.01" content="9FFF1C773C117D326057A0D65ABA9ABD" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vernalmedicare.com/">
   <meta property="og:title" content="Serving Medicare Recipients in the Uintah Basin | Vernal Medicare">
   <meta property="og:description" content="Local, licensed help with Medicare and under-65 health insurance in Vernal and the Uintah Basin.">
-  <meta property="og:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
   <meta property="og:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Vernal Medicare">
 
-  <meta name="msvalidate.01" content="9FFF1C773C117D326057A0D65ABA9ABD" />
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Medicare & Health Insurance in Vernal, Utah | Vernal Medicare">
   <meta name="twitter:description" content="Local, licensed help with Medicare and under-65 health insurance in the Uintah Basin.">
-  <meta name="twitter:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
   <meta name="twitter:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
@@ -44,7 +44,7 @@
     gtag('config', 'G-NW6ENB89NF', { anonymize_ip: true });
   </script>
 
-  <!-- Structured data -->
+  <!-- Enhanced LocalBusiness Schema with Reviews -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,7 +60,7 @@
 
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1080 W Hwy 40 (inside Smith's Pharmacy)",
+    "streetAddress": "1080 W Hwy 40",
     "addressLocality": "Vernal",
     "addressRegion": "UT",
     "postalCode": "84078",
@@ -81,15 +81,37 @@
   }],
 
   "areaServed": [
-    "Vernal",
-    "Naples",
-    "Maeser",
-    "Jensen",
-    "Uintah County",
-    "Uintah Basin"
+    {
+      "@type": "City",
+      "name": "Vernal",
+      "containedIn": {
+        "@type": "State",
+        "name": "Utah"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Naples"
+    },
+    {
+      "@type": "City",
+      "name": "Maeser"
+    },
+    {
+      "@type": "City",
+      "name": "Jensen"
+    }
   ],
 
-  "serviceArea": { "@type": "AdministrativeArea", "name": "Uintah Basin" },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.4527277,
+      "longitude": -109.5478186
+    },
+    "geoRadius": "50000"
+  },
 
   "containedInPlace": {
     "@type": "Pharmacy",
@@ -102,36 +124,133 @@
       "postalCode": "84078",
       "addressCountry": "US"
     },
-    "hasMap": "https://www.google.com/maps?cid=5192524098518186165",
-    "sameAs": ["https://www.google.com/maps?cid=5192524098518186165"]
+    "hasMap": "https://www.google.com/maps?cid=5192524098518186165"
   },
+
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Medicare Insurance Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Medicare Advantage Plans",
+          "description": "Compare HMO and PPO Medicare Advantage plans with local doctors and hospitals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Medicare Supplement (Medigap)",
+          "description": "Plan G, Plan N, and other Medigap options for predictable healthcare costs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Part D Prescription Drug Plans",
+          "description": "Compare prescription drug coverage and pharmacy costs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Under-65 Health Insurance",
+          "description": "ACA Marketplace and off-exchange health insurance options"
+        }
+      }
+    ]
+  },
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Rita S."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Rocco made Medicare simple. He compared plans, explained the fine print, and saved me money."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Jim P."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Honest, patient, and local. He walked me through Advantage vs. Supplement without pressure."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Ellen M."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Rocco was a great help to me when I was signing up for Medicare. He helped me find a supplement plan that was right for me. I have recommended him to my friends and family."
+    }
+  ],
 
   "knowsAbout": [
     "Medicare Advantage",
+    "Medicare Supplement",
     "Medigap",
     "Part D",
     "Medicare enrollment",
-    "Uintah Basin providers"
+    "Uintah Basin providers",
+    "Healthcare insurance",
+    "Senior insurance"
   ],
 
   "priceRange": "$$",
-  "founder": "Rocco DeLuca",
+  "founder": {
+    "@type": "Person",
+    "name": "Rocco DeLuca",
+    "jobTitle": "Licensed Insurance Agent"
+  },
 
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
     "telephone": "+1-435-219-5120",
+    "email": "rocco@medicareadvocates.com",
     "areaServed": "US-UT",
-    "availableLanguage": "en"
+    "availableLanguage": ["en"],
+    "contactOption": "TollFree"
   },
 
   "sameAs": [
     "https://www.facebook.com/VernalMedicare"
-    /* Add Yelp/Bing/Chamber profiles here when live; do NOT include your homepage */
   ]
 }
 </script>
 
+<!-- Site Navigation -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -159,7 +278,7 @@
 }
 </script>
 
-
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -171,7 +290,7 @@
       "name": "Which Medicare Advantage plans are available in Vernal and the Uintah Basin?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Plan options change yearly. We compare current HMO/PPO choices for your doctors, hospitals, and pharmacies."
+        "text": "Plan options change yearly. We compare current HMO/PPO choices for your doctors, hospitals, and pharmacies in Vernal, Naples, Maeser, Jensen, and throughout Uintah County."
       }
     },
     {
@@ -179,7 +298,7 @@
       "name": "Do local hospitals work with Medicare Advantage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Many do, but networks vary by plan. We verify your providers before you enroll."
+        "text": "Many plans include nearby hospitals and clinics in the Uintah Basin, but networks vary by plan. We verify your doctors and facilities before you enroll so you're not surprised by out-of-network costs."
       }
     },
     {
@@ -187,7 +306,7 @@
       "name": "Can you check my prescriptions and preferred pharmacy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We run your medications through each plan’s formulary and confirm preferred pharmacies near you."
+        "text": "Yes. We run your medication list through each plan's formulary to estimate monthly costs and confirm preferred pharmacies in Vernal and surrounding towns."
       }
     },
     {
@@ -195,7 +314,7 @@
       "name": "How much does your help cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There’s no extra cost to you. We’re paid by the plan you choose and provide local support year-round."
+        "text": "There's no extra cost to you. We're licensed and paid by the insurance plan you choose, and you get local support before and after enrollment at no charge."
       }
     },
     {
@@ -203,7 +322,7 @@
       "name": "When can I change Medicare plans?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Initial Enrollment, Annual Enrollment (Oct 15–Dec 7), and Special Enrollment Periods may apply based on your situation."
+        "text": "You can change plans during Initial Enrollment (when you first qualify), Annual Enrollment Period (October 15–December 7), and certain Special Enrollment Periods. We'll review your situation and timing options."
       }
     },
     {
@@ -211,9 +330,37 @@
       "name": "Where can we meet?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We meet at Smith’s Pharmacy in Vernal or by phone/video—whichever you prefer."
+        "text": "We meet at Smith's Pharmacy in Vernal (1080 W Hwy 40) or by phone/video call—whichever you prefer."
       }
     }
+  ]
+}
+</script>
+
+<!-- Person Schema for Rocco -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rocco DeLuca",
+  "jobTitle": "Licensed Insurance Agent",
+  "worksFor": {
+    "@type": "InsuranceAgency",
+    "name": "Vernal Medicare"
+  },
+  "telephone": "+1-435-219-5120",
+  "email": "rocco@medicareadvocates.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vernal",
+    "addressRegion": "UT",
+    "postalCode": "84078"
+  },
+  "knowsAbout": [
+    "Medicare",
+    "Medicare Advantage",
+    "Medigap",
+    "Health Insurance"
   ]
 }
 </script>
@@ -269,15 +416,11 @@
   <!-- Hero -->
   <section class="hero-row">
     <div class="hero-image-wrapper">
-      <img src="pictures/vernalmedicare.webp"
-     alt="Medicare & health insurance help in Vernal, Utah"
-     width="1600" height="600" class="hero-banner" loading="eager" decoding="async" fetchpriority="high">
+      <img src="pictures/vernalmedicare.webp" alt="Medicare and health insurance help in Vernal, Utah" width="1600" height="600" class="hero-banner" loading="eager" decoding="async" fetchpriority="high">
       <div class="hero-text">
         <h1>Vernal-Uintah Basin</h1>
         <p>Medicare Advantage and Part D Plans</p>
-       <a href="https://www.sunfirematrix.com/app/consumer/medicareadvocates/10569110/"
-   class="enroll-btn"
-   target="_blank" rel="noopener noreferrer">
+       <a href="https://www.sunfirematrix.com/app/consumer/medicareadvocates/10569110/" class="enroll-btn" target="_blank" rel="noopener noreferrer">
   Compare Plans & Enroll
 </a>
 </div>
@@ -290,7 +433,7 @@
     <!-- Left: text -->
     <div class="nap-info">
       <h2>Local Medicare Help in Vernal, Utah</h2>
-      <p><strong>Find me at Smith’s Pharmacy</strong><br>
+      <p><strong>Find me at Smith's Pharmacy</strong><br>
         1080 W Hwy 40, Vernal, UT 84078<br>
         Serving Vernal, Naples, Maeser, Jensen, and all of Uintah County.
       </p>
@@ -312,14 +455,14 @@
     </div>
 
     <!-- Right: map -->
-    <figure class="map-wrap" aria-label="Smith’s Pharmacy in Vernal, Utah">
+    <figure class="map-wrap" aria-label="Smith's Pharmacy in Vernal, Utah">
       <iframe
         src="https://www.google.com/maps?q=Smith%27s%20Pharmacy,+1080+W+Highway+40,+Vernal,+UT+84078&output=embed"
         width="100%" height="300" style="border:0;" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-        title="Smith’s Pharmacy in Vernal, Utah"></iframe>
+        title="Smith's Pharmacy in Vernal, Utah"></iframe>
       <figcaption>
-        Serving clients at <strong>Smith’s Pharmacy</strong> — 
+        Serving clients at <strong>Smith's Pharmacy</strong> — 
         <a href="https://www.google.com/maps?q=Smith%27s%20Pharmacy,+1080+W+Highway+40,+Vernal,+UT+84078" target="_blank" rel="noopener">
           open in Google Maps
         </a>
@@ -365,7 +508,7 @@
   <!-- Slide 1 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Rocco made Medicare simple. He compared plans, explained the fine print, and saved me money.”
+      "Rocco made Medicare simple. He compared plans, explained the fine print, and saved me money."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">R</div>
@@ -373,7 +516,7 @@
         <strong>Rita S.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -382,7 +525,7 @@
   <!-- Slide 2 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Honest, patient, and local. He walked me through Advantage vs. Supplement without pressure.”
+      "Honest, patient, and local. He walked me through Advantage vs. Supplement without pressure."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">J</div>
@@ -390,7 +533,7 @@
         <strong>Jim P.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -399,7 +542,7 @@
   <!-- Slide 3 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Fast responses and clear answers. Highly recommend Vernal Medicare.”
+      "Fast responses and clear answers. Highly recommend Vernal Medicare."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">M</div>
@@ -407,16 +550,16 @@
         <strong>Maria D.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
   </article>
 
-  <!-- Slide 4 (from bottom section) -->
+  <!-- Slide 4 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Rocco made Medicare simple and found a plan that covered my doctors and meds.”
+      "Rocco made Medicare simple and found a plan that covered my doctors and meds."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">J</div>
@@ -424,16 +567,16 @@
         <strong>J.S.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
   </article>
 
-  <!-- Slide 5 (from bottom section) -->
+  <!-- Slide 5 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “He explained the differences between Advantage and Medigap in plain English.”
+      "He explained the differences between Advantage and Medigap in plain English."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">M</div>
@@ -441,7 +584,7 @@
         <strong>M.K.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -450,7 +593,7 @@
   <!-- Slide 6 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Went the extra mile to check my prescriptions and preferred pharmacies.”
+      "Went the extra mile to check my prescriptions and preferred pharmacies."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">B</div>
@@ -458,7 +601,7 @@
         <strong>B.T.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -467,7 +610,7 @@
   <!-- Slide 7 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “No pressure, just clear options—enrollment took about 10 minutes.”
+      "No pressure, just clear options—enrollment took about 10 minutes."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">L</div>
@@ -475,7 +618,7 @@
         <strong>L.H.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -484,7 +627,7 @@
   <!-- Slide 8 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Helped my husband and me switch without losing our doctors.”
+      "Helped my husband and me switch without losing our doctors."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">P</div>
@@ -492,7 +635,7 @@
         <strong>P.W.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -501,7 +644,7 @@
   <!-- Slide 9 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “I finally understand Part D. Saved me on copays.”
+      "I finally understand Part D. Saved me on copays."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">D</div>
@@ -509,7 +652,7 @@
         <strong>D.R.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -518,7 +661,7 @@
   <!-- Slide 10 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Local, responsive, and trustworthy. Highly recommend.”
+      "Local, responsive, and trustworthy. Highly recommend."
     </p>
     <footer class="vm-reviews__meta">
       <div class="vm-reviews__avatar" aria-hidden="true">S</div>
@@ -526,7 +669,7 @@
         <strong>S.C.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -535,15 +678,15 @@
   <!-- Slide 11 -->
   <article class="vm-reviews__slide" data-rating="5">
     <p class="vm-reviews__text">
-      “Rocco was a great  help to  me when I was signing up for Medicare. He helped me find a supplement plan that was right for me. I have recommend him to  my friends and family. I really appreciated his help.”
+      "Rocco was a great help to me when I was signing up for Medicare. He helped me find a supplement plan that was right for me. I have recommended him to my friends and family. I really appreciated his help."
     </p>
     <footer class="vm-reviews__meta">
-      <div class="vm-reviews__avatar" aria-hidden="true">S</div>
+      <div class="vm-reviews__avatar" aria-hidden="true">E</div>
       <div>
         <strong>Ellen M.</strong>
         <div class="vm-reviews__source">
           <span class="vm-reviews__stars" aria-label="5 out of 5 stars"></span>
-          <a class="vm-reviews__link" href="#" target="_blank" rel="noopener">Verified on Facebook</a>
+          <a class="vm-reviews__link" href="https://www.facebook.com/VernalMedicare/reviews" target="_blank" rel="noopener">Verified on Facebook</a>
         </div>
       </div>
     </footer>
@@ -608,61 +751,54 @@
 
     <div class="smile-track" tabindex="0">
       <!-- Slide 1 -->
-      <a class="smile-slide" href="pictures/joke2.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke13.webp" target="_blank" rel="noopener">
         <img src="pictures/joke13.webp" alt="Medicare marketing joke — dental add-ons">
       </a>
 
       <!-- Slide 2 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke5.webp" target="_blank" rel="noopener">
         <img src="pictures/joke5.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 3 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke6.webp" target="_blank" rel="noopener">
         <img src="pictures/joke6.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 4 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke7.webp" target="_blank" rel="noopener">
         <img src="pictures/joke7.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 5 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke8.webp" target="_blank" rel="noopener">
         <img src="pictures/joke8.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 6 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke9.webp" target="_blank" rel="noopener">
         <img src="pictures/joke9.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 7 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke10.webp" target="_blank" rel="noopener">
         <img src="pictures/joke10.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 8 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke11.webp" target="_blank" rel="noopener">
         <img src="pictures/joke11.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 9 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke12.webp" target="_blank" rel="noopener">
         <img src="pictures/joke12.webp" alt="Part B vs Part C superhero parody">
       </a>
 
       <!-- Slide 10 -->
-      <a class="smile-slide" href="pictures/joke3.webp" target="_blank" rel="noopener">
+      <a class="smile-slide" href="pictures/joke13.webp" target="_blank" rel="noopener">
         <img src="pictures/joke13.webp" alt="Part B vs Part C superhero parody">
       </a>
-
-      <!-- To add more: duplicate a slide block, change the image path + alt -->
-      <!--
-      <a class="smile-slide" href="pictures/joke4.webp" target="_blank" rel="noopener">
-        <img src="pictures/joke4.webp" alt="Your third joke">
-      </a>
-      -->
     </div>
 
     <button class="smile-arrow next" aria-label="Next comic" type="button">›</button>
@@ -678,56 +814,56 @@
       <!-- Quote 1 -->
       <figure class="spirit-quote">
         <blockquote>
-          “Keeping your body healthy is an expression of gratitude to the whole cosmos—the trees, the clouds, everything.”
+          "Keeping your body healthy is an expression of gratitude to the whole cosmos—the trees, the clouds, everything."
         </blockquote>
         <figcaption>Thich Nhat Hanh</figcaption>
       </figure>
 
       <!-- Quote 2 -->
       <figure class="spirit-quote">
-        <blockquote>“A cheerful heart is good medicine.”</blockquote>
+        <blockquote>"A cheerful heart is good medicine."</blockquote>
         <figcaption>Proverbs 17:22</figcaption>
       </figure>
 
       <!-- Quote 3 -->
       <figure class="spirit-quote">
-        <blockquote>“Be kind whenever possible. It is always possible.”</blockquote>
+        <blockquote>"Be kind whenever possible. It is always possible."</blockquote>
         <figcaption>Dalai Lama</figcaption>
       </figure>
 
       <!-- Quote 4 -->
       <figure class="spirit-quote">
-        <blockquote>“What you seek is seeking you.”</blockquote>
+        <blockquote>"What you seek is seeking you."</blockquote>
         <figcaption>Rūmī</figcaption>
       </figure>
 
       <!-- Quote 5 -->
       <figure class="spirit-quote">
-        <blockquote>“Not all of us can do great things. But we can do small things with great love.”</blockquote>
+        <blockquote>"Not all of us can do great things. But we can do small things with great love."</blockquote>
         <figcaption>Mother Teresa</figcaption>
       </figure>
 
       <!-- Quote 6 -->
       <figure class="spirit-quote">
-        <blockquote>“He who has health has hope; and he who has hope has everything.”</blockquote>
+        <blockquote>"He who has health has hope; and he who has hope has everything."</blockquote>
         <figcaption>Traditional Proverb</figcaption>
       </figure>
 
       <!-- Quote 7 -->
       <figure class="spirit-quote">
-        <blockquote>“The happiness of your life depends upon the quality of your thoughts.”</blockquote>
+        <blockquote>"The happiness of your life depends upon the quality of your thoughts."</blockquote>
         <figcaption>Marcus Aurelius</figcaption>
       </figure>
 
       <!-- Quote 8 -->
       <figure class="spirit-quote">
-        <blockquote>“Where there is charity and wisdom there is neither fear nor ignorance.”</blockquote>
+        <blockquote>"Where there is charity and wisdom there is neither fear nor ignorance."</blockquote>
         <figcaption>St. Francis of Assisi</figcaption>
       </figure>
 
       <!-- Quote 9 -->
       <figure class="spirit-quote">
-        <blockquote>“The secret to long life is don't die young.”</blockquote>
+        <blockquote>"The secret to long life is don't die young."</blockquote>
         <figcaption>George Burns</figcaption>
       </figure>
     </div>
@@ -748,22 +884,22 @@
 
   <details>
     <summary>Do local hospitals work with Medicare Advantage?</summary>
-    <p>Many plans include nearby hospitals and clinics, but networks vary by plan. We verify your doctors and facilities before you switch so you’re not surprised by out-of-network costs.</p>
+    <p>Many plans include nearby hospitals and clinics, but networks vary by plan. We verify your doctors and facilities before you switch so you're not surprised by out-of-network costs.</p>
   </details>
 
   <details>
     <summary>Can you check my prescriptions and preferred pharmacy?</summary>
-    <p>Yes. We run your medication list through each plan’s formulary to estimate monthly costs and confirm preferred pharmacies in Vernal and surrounding towns.</p>
+    <p>Yes. We run your medication list through each plan's formulary to estimate monthly costs and confirm preferred pharmacies in Vernal and surrounding towns.</p>
   </details>
 
   <details>
     <summary>How much does your help cost?</summary>
-    <p>There’s no extra cost to you. We’re licensed and paid by the plan you choose, and you get local support before and after enrollment.</p>
+    <p>There's no extra cost to you. We're licensed and paid by the plan you choose, and you get local support before and after enrollment.</p>
   </details>
 
   <details>
     <summary>When can I change plans?</summary>
-    <p>Initial Enrollment, Annual Enrollment (Oct 15–Dec 7), and certain Special Enrollment Periods may apply. We’ll review your situation and the timing that fits.</p>
+    <p>Initial Enrollment, Annual Enrollment (Oct 15–Dec 7), and certain Special Enrollment Periods may apply. We'll review your situation and the timing that fits.</p>
   </details>
 </section>
 
@@ -843,103 +979,9 @@
     })();
   </script>
 
-<!-- 3CX Live Chat (auto-updates from PBX) -->
+<!-- 3CX Live Chat -->
 <call-us-selector phonesystem-url="https://1888.3cx.cloud" party="LiveChat956014"></call-us-selector>
 <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
-
-<style>
-  /* Loads last, so it wins. Keep SunFire CTA text white on mobile + desktop */
-  .hero-row .hero-text a.enroll-btn,
-  .hero-row .hero-text a.enroll-btn:link,
-  .hero-row .hero-text a.enroll-btn:visited,
-  .hero-row .hero-text a.enroll-btn:hover,
-  .hero-row .hero-text a.enroll-btn:focus,
-  .hero-row .hero-text a.enroll-btn:active,
-  .hero-row .hero-text a.button,
-  .hero-row .hero-text a.button:link,
-  .hero-row .hero-text a.button:visited,
-  .hero-row .hero-text a.button:hover,
-  .hero-row .hero-text a.button:focus,
-  .hero-row .hero-text a.button:active,
-  .hero-row .hero-text a.enroll-btn *,
-  .hero-row .hero-text a.button * {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important; /* iOS/Safari */
-    text-decoration: none !important;
-  }
-  /* …your existing rules in this block… */
-
-  /* FAQ styles */
-#faq { margin-top: 24px; scroll-margin-top: 80px; }
-#faq details { 
-  margin: 10px 0; 
-  padding: 12px; 
-  border: 1px solid #e5e7eb; 
-  border-radius: 8px; 
-  background: #fafafa; 
-}
-#faq summary { 
-  font-weight: 700; 
-  cursor: pointer; 
-}
-#faq p { margin-top: 8px; }
-
-
-  /* Push the "Start a Quote (Enroll)" button lower under the signature line */
-  .signature + p {                /* targets the <p> that comes right after the signature */
-    margin-top: 20px;             /* adjust 16–28px to taste */
-  }
-  /* Add space between the round photo and the title (desktop only) */
-@media (min-width: 769px){
-  .logo-left { padding-right: 90px; }
-}
-
-  .enroll-btn{
-  display:inline-block;padding:14px 22px;border-radius:10px;
-  font-weight:700;text-decoration:none;
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-  background:linear-gradient(#2563eb,#1e40af);color:#fff
-}
-
-.enroll-btn:hover{transform:translateY(-1px)}
-/* Bigger round photo that overlaps the banner */
-.main-header { position: relative; }
-/* Header logo sizing (desktop) */
-@media (min-width: 769px){
-  .logo-left img{
-    height: 128px;      /* bump to 140px if you want bigger */
-    width: auto;
-    border-radius: 9999px;
-    position: relative;
-    top: 12px;
-    z-index: 5;
-    transform: none;    /* cancel any earlier scale() */
-  }
-}
-
-/* Header logo sizing (mobile) */
-@media (max-width: 768px){
-  .logo-left img{
-    height: 56px;
-    width: auto;
-    top: 0;
-    transform: none;
-  }
-}
-
-/* LOCK HERO OVERLAY WIDTH (wins over earlier rules) */
-@media (min-width: 769px){
-  .hero-image-wrapper > .hero-text{
-    width: 870px !important;      /* set your target width */
-    max-width: 96% !important;      /* keep a little margin on narrow screens */
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-  }
-}
-
-
-</style>
 
 <script>
 (function(){
@@ -947,7 +989,7 @@
     const link = e.target.closest('.vm-comic');
     if (!link) return;
 
-    e.preventDefault(); // don’t open the image; we’re flipping instead
+    e.preventDefault();
     const img = link.querySelector('img');
     if (!img) return;
 
@@ -955,13 +997,11 @@
     const alt = img.getAttribute('data-alt');
     if (!alt) return;
 
-    // half-flip, then swap, then flip back
     img.classList.add('is-flipping');
     const onEnd = function(){
       img.removeEventListener('transitionend', onEnd);
       img.setAttribute('src', alt);
       img.setAttribute('data-alt', src);
-      // let the browser register the new src, then unflip
       requestAnimationFrame(() => requestAnimationFrame(() => {
         img.classList.remove('is-flipping');
       }));
@@ -990,7 +1030,6 @@
   prev && prev.addEventListener('click', () => slideBy(-1));
   next && next.addEventListener('click', () => slideBy(1));
 
-  // Keyboard support when the track is focused
   track.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); slideBy(-1); }
     if (e.key === 'ArrowRight'){ e.preventDefault(); slideBy(1); }
@@ -1010,7 +1049,6 @@
   const next   = root.querySelector('.vm-reviews__next');
   const dotsWrap = root.querySelector('.vm-reviews__dots');
 
-  // Build stars from data-rating on each slide
   const starSVG = (filled) =>
     `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" d="M12 3.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5-4.7-4.6 6.5-.9L12 3.6z"/></svg>`;
 
@@ -1020,11 +1058,6 @@
     if (starsEl) starsEl.innerHTML = Array.from({length:5}, (_,i)=>starSVG(i < rating)).join('');
   });
 
-  // ❌ Remove width math (causes off-canvas slides)
-  // track.style.width = `${slides.length * 100}%`;
-  // slides.forEach(slide => (slide.style.width = `${100 / slides.length}%`));
-
-  // Build dots
   const dots = slides.map((_, i) => {
     const b = document.createElement('button');
     b.className = 'vm-reviews__dot';
@@ -1037,7 +1070,6 @@
   let index = 0;
   const go = (i) => {
     index = (i + slides.length) % slides.length;
-    // ✅ Move exactly one full slide width each time
     track.style.transform = `translateX(-${index * 100}%)`;
     dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
   };
@@ -1045,7 +1077,6 @@
   prev.addEventListener('click', () => go(index - 1));
   next.addEventListener('click', () => go(index + 1));
 
-  // Auto-play (pause on hover / tab switch)
   let timer = setInterval(() => { if (!root.matches(':hover')) go(index + 1); }, 6000);
   document.addEventListener('visibilitychange', () => {
     clearInterval(timer);
@@ -1066,7 +1097,6 @@
   const next = root.querySelector('.spirit-next');
   const dotsWrap = root.querySelector('.spirit-dots');
 
-  // Build dots
   const dots = slides.map((_, i) => {
     const b = document.createElement('button');
     b.className = 'spirit-dot';
@@ -1086,7 +1116,6 @@
   prev.addEventListener('click', () => go(index - 1));
   next.addEventListener('click', () => go(index + 1));
 
-  // Auto-rotate every 9s, pause on hover / hidden tab
   let timer = setInterval(() => { if (!root.matches(':hover')) go(index + 1); }, 9000);
   document.addEventListener('visibilitychange', () => {
     clearInterval(timer);

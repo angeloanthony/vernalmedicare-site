@@ -94,32 +94,6 @@ p {
   z-index: 1000;
 }
 
-/* Header logo block */
-/* Header logo block (bigger, overlaps the hero, shifted left) */
-.logo-left {
-  flex-shrink: 0;
-  padding: 0;
-  height: 96px;
-  display: flex;
-  align-items: center;
-  margin-left: -40px;      /* move farther left (tweak -32 to -52 if needed) */
-  margin-right: 12px;      /* breathing room before the title */
-}
-
-.logo-left img{
-  height: 100%;
-  width: auto;
-  border-radius: 9999px;
-  position: relative;
-  top: 14px;               /* drops it to overlap the banner */
-  z-index: 5;              /* keep on top of the banner */
-}
-
-@media (min-width: 769px){
-  /* Reserve space for the scaled headshot */
-  .logo-left { padding-right: 130px; } /* adjust 110–160px to taste */
-}
-
 .site-name-center {
     text-align: center;
     padding: 0 1rem;
@@ -628,10 +602,6 @@ p {
     min-height: 60px;
   }
 
-  .logo-left {
-    order: 1;
-  }
-
   .container.header-top {
     flex-direction: row;
     justify-content: flex-start;
@@ -1092,17 +1062,6 @@ main {
   text-align: center;
 }
 
-.logo-left img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  will-change: transform;
-}
-
-/* Only zoom non-avatar images (keeps the headshot sane) */
-.logo-left img:not(.logo-avatar):hover{
-  transform: scale(1.05) rotate(-1deg);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
 .sample-image {
   max-width: 100%;
   height: auto;
@@ -1152,17 +1111,6 @@ main {
   .container.header-top {
     padding: .5rem 0 !important;
     min-height: 64px !important;
-  }
-  .logo-left {
-    height: 64px !important;
-    margin-left: 0 !important;
-  }
-  .logo-left img {
-    height: 56px !important;
-    width: auto !important;
-    transform: none !important;
-    border-radius: 9999px;
-    top: 0 !important;
   }
   .site-name {
     font-size: 1.6rem !important;
@@ -2103,40 +2051,80 @@ iframe {
   border-radius: 8px;
   background: #fafafa;
 }
-/* Avatar: contained in circle by default */
-.logo-left{
-  width: 96px;
-  height: 96px;
-  border-radius: 9999px;
-  overflow: hidden;       /* contain image inside circle */
+
+/* ===========================================
+   LOGO - FINAL VERSION
+   Delete ALL .logo-left rules in your CSS,
+   then paste this at the VERY BOTTOM of styles.css
+   =========================================== */
+
+.logo-left {
   flex-shrink: 0;
+  padding: 0;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  margin-left: 0;
+  border-radius: 50%;
+  overflow: visible !important;
   position: relative;
   z-index: 5;
 }
 
-.logo-left img.logo-avatar{
+.logo-left img {
   width: 100%;
   height: 100%;
-  object-fit: contain;    /* keep full image visible */
+  object-fit: cover;
   object-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50% !important;
+  display: block;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* On hover: let it expand outside the circle */
-.logo-left:hover{
-  overflow: visible;      /* remove clipping so image can "escape" */
+/* Hover - stays round, gets bigger */
+.logo-left:hover img {
+  transform: scale(1.4) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 50% !important;
 }
 
-.logo-left:hover img.logo-avatar{
-  transform: scale(1.4);  /* expand freely */
-  box-shadow: 0 6px 16px rgba(0,0,0,.25);
-  z-index: 10;
-}
-
-@media (max-width:768px){
-  .logo-left{
-    width: 56px;
-    height: 56px;
+/* Desktop: slightly bigger base size */
+@media (min-width: 769px) {
+  .logo-left {
+    height: 110px;
+    width: 110px;
+    top: 10px;
+    margin-left: -16px;
+  }
+  
+  .logo-left:hover img {
+    transform: scale(1.5) !important;
   }
 }
 
+/* Mobile: smaller */
+@media (max-width: 768px) {
+  .logo-left {
+    height: 64px;
+    width: 64px;
+    margin-left: 0;
+  }
+  
+  /* Disable hover on mobile */
+  .logo-left:hover img {
+    transform: none !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 960px) and (min-width: 769px) {
+  .logo-left {
+    height: 90px;
+    width: 90px;
+    margin-left: -8px;
+  }
+}

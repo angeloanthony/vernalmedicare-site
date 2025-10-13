@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>About — Vernal Medicare | Local, Licensed Help in Uintah County</title>
-  <meta name="description" content="I’m Rocco DeLuca, a local, licensed agent in Vernal, Utah. Simple help with Medicare, under-65 coverage, copay coverage, and life insurance—no pressure.">
+  <meta name="description" content="I'm Rocco DeLuca, a local, licensed agent in Vernal, Utah. Simple help with Medicare, under-65 coverage, copay coverage, and life insurance—no pressure.">
   <link rel="canonical" href="https://vernalmedicare.com/about.html">
   <meta name="robots" content="index,follow">
 
@@ -18,7 +18,9 @@
   <meta property="og:url" content="https://vernalmedicare.com/about.html">
   <meta property="og:title" content="About — Vernal Medicare | Local, Licensed Help in Uintah County">
   <meta property="og:description" content="Local, face-to-face help choosing Medicare and health coverage that fits your needs and budget.">
-  <meta property="og:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
+  <meta property="og:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Vernal Medicare">
   <meta property="og:locale" content="en_US">
 
@@ -26,14 +28,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About — Vernal Medicare | Local, Licensed Help in Uintah County">
   <meta name="twitter:description" content="Local, face-to-face help choosing Medicare and health coverage that fits your needs and budget.">
-  <meta name="twitter:image" content="https://vernalmedicare.com/pictures/Rocco.webp">
+  <meta name="twitter:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
 
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW6ENB89NF"></script>
@@ -44,7 +46,7 @@
     gtag('config', 'G-NW6ENB89NF', { anonymize_ip: true });
   </script>
 
-  <!-- Structured data (org) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,7 +58,40 @@
     "telephone": "+1-435-219-5120",
     "email": "rocco@medicareadvocates.com",
     "areaServed": "Uintah County, Utah",
-    "address": { "@type": "PostalAddress", "addressLocality": "Vernal", "addressRegion": "UT", "addressCountry": "US" }
+    "address": { 
+      "@type": "PostalAddress", 
+      "addressLocality": "Vernal", 
+      "addressRegion": "UT",
+      "postalCode": "84078",
+      "addressCountry": "US" 
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rocco DeLuca",
+    "jobTitle": "Licensed Insurance Agent",
+    "worksFor": {
+      "@type": "InsuranceAgency",
+      "name": "Vernal Medicare"
+    },
+    "telephone": "+1-435-219-5120",
+    "email": "rocco@medicareadvocates.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vernal",
+      "addressRegion": "UT",
+      "postalCode": "84078"
+    },
+    "knowsAbout": [
+      "Medicare",
+      "Medicare Advantage",
+      "Medigap",
+      "Health Insurance"
+    ]
   }
   </script>
 </head>
@@ -65,7 +100,7 @@
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container">
-      <span>📧 <a href="mailto:rocco@medicareadvococates.com">rocco@medicareadvocates.com</a></span>
+      <span>📧 <a href="mailto:rocco@medicareadvocates.com">rocco@medicareadvocates.com</a></span>
       <span>📞 <a href="tel:+14352195120">+1 (435) 219-5120</a></span>
     </div>
   </div>
@@ -73,104 +108,113 @@
   <!-- Main Header / Nav -->
   <header class="main-header">
     <div class="container header-top">
-<div class="site-name-center">
-  <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
-    <picture>
-      <source srcset="pictures/medicare-simplified.webp" type="image/webp">
-      <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
-    </picture>
-  </a>
-</div>
+      <div class="logo-left">
+        <a href="index.html">
+          <img src="pictures/Rocco.webp" alt="Rocco DeLuca — Vernal Medicare">
+        </a>
+      </div>
 
+      <div class="site-name-center">
+        <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
+          <picture>
+            <source srcset="pictures/medicare-simplified.webp" type="image/webp">
+            <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
+          </picture>
+        </a>
+      </div>
 
-      <!-- Mobile toggle -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false">
+      <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
         <span></span>
       </label>
 
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav">
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="medigap.html">Medigap</a></li>
           <li><a href="aca.html">Under-65 Health Insurance</a></li>
           <li><a href="indemnity.html">Copay Coverage</a></li>
           <li><a href="life.html">Life Insurance</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<main id="content" class="container">
-  <!-- Hero -->
-  <section>
-    <h1>About Vernal Medicare</h1>
-    <p>I’m <strong>Rocco DeLuca</strong>, a local, licensed agent based in Vernal. My job is simple: help you choose coverage that fits your needs and budget—<em>without the runaround</em>.</p>
-  </section>
+  <main id="content" class="container">
+    <!-- Hero -->
+    <section>
+      <h1>About Vernal Medicare</h1>
+      <p>I'm <strong>Rocco DeLuca</strong>, a local, licensed agent based in Vernal. My job is simple: help you choose coverage that fits your needs and budget—<em>without the runaround</em>.</p>
+    </section>
 
-  <!-- What I help with (condensed) -->
-  <section>
-    <h2>What I help with</h2>
-    <ul>
-      <li><strong>Medicare Advantage</strong> and <strong>Medigap</strong></li>
-      <li><strong>Prescription plans (Part D)</strong></li>
-      <li><strong>Under-65 health insurance</strong> (Marketplace)</li>
-      <li><strong>Copay coverage</strong> (fixed indemnity)</li>
-      <li><strong>Life insurance</strong> (term & final expense)</li>
-    </ul>
-    <p class="note">There’s no extra cost to you—agents are typically paid by the plan or carrier if you enroll.</p>
-  </section>
+    <!-- What I help with (condensed) -->
+    <section>
+      <h2>What I help with</h2>
+      <ul>
+        <li><strong>Medicare Advantage</strong> and <strong>Medigap</strong></li>
+        <li><strong>Prescription plans (Part D)</strong></li>
+        <li><strong>Under-65 health insurance</strong> (Marketplace)</li>
+        <li><strong>Copay coverage</strong> (fixed indemnity)</li>
+        <li><strong>Life insurance</strong> (term & final expense)</li>
+      </ul>
+      <p class="note">There's no extra cost to you—agents are typically paid by the plan or carrier if you enroll.</p>
+    </section>
 
-  <!-- How we work (non-repetitive) -->
-  <section>
-    <h2>How we’ll work together</h2>
-    <ol>
-      <li><strong>Listen:</strong> your needs and budget first.</li>
-      <li><strong>Compare:</strong> simple, side-by-side options in plain English.</li>
-      <li><strong>Enroll & support:</strong> we get it done right—and I’m here year-round.</li>
-    </ol>
-  </section>
+    <!-- How we work (non-repetitive) -->
+    <section>
+      <h2>How we'll work together</h2>
+      <ol>
+        <li><strong>Listen:</strong> your needs and budget first.</li>
+        <li><strong>Compare:</strong> simple, side-by-side options in plain English.</li>
+        <li><strong>Enroll & support:</strong> we get it done right—and I'm here year-round.</li>
+      </ol>
+    </section>
 
-  <!-- Local angle (short) -->
-  <section>
-    <h2>Why local matters</h2>
-    <p>Plans perform differently by county. Because I live and work here, I know the local networks, pharmacies, and what actually works in the Basin.</p>
-  </section>
+    <!-- Local angle (short) -->
+    <section>
+      <h2>Why local matters</h2>
+      <p>Plans perform differently by county. Because I live and work here, I know the local networks, pharmacies, and what actually works in the Basin.</p>
+    </section>
 
-  <!-- Carriers & standard disclosure (short) -->
-  <section>
-    <h2>Carriers</h2>
-    <p>I work with multiple carriers (availability varies by county). <em>We do not offer every plan available in your area.</em> Any information I provide is limited to the plans I do offer. For info on all your options, visit <a href="https://www.medicare.gov" target="_blank" rel="nofollow">Medicare.gov</a> or call 1-800-MEDICARE (TTY: 1-877-486-2048).</p>
-  </section>
+    <!-- Carriers & standard disclosure (short) -->
+    <section>
+      <h2>Carriers</h2>
+      <p>I work with multiple carriers (availability varies by county). <em>We do not offer every plan available in your area.</em> Any information I provide is limited to the plans I do offer. For info on all your options, visit <a href="https://www.medicare.gov" target="_blank" rel="nofollow">Medicare.gov</a> or call 1-800-MEDICARE (TTY: 1-877-486-2048).</p>
+    </section>
 
-  <!-- Contact -->
-  <section>
-    <h2>Ready to talk?</h2>
-    <p>Call or email for a friendly, no-pressure chat.</p>
-    <p><a class="button primary" href="tel:+14352195120">Call (435) 219-5120</a>
-       <a class="button" href="mailto:rocco@medicareadvocates.com">Email us</a></p>
-  </section>
+    <!-- Contact -->
+    <section>
+      <h2>Ready to talk?</h2>
+      <p>Call or email for a friendly, no-pressure chat.</p>
+      <p style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+        <a class="button primary" href="tel:+14352195120">Call (435) 219-5120</a>
+        <a class="button" href="mailto:rocco@medicareadvocates.com">Email us</a>
+      </p>
+    </section>
 
-  <blockquote class="pull-quote" style="font-style:italic; margin: 1.5rem 0; color:#555;">
-    “Coverage should be simple, local, and matched to you.”
-    <span style="display:block; margin-top:.5rem;">— Rocco DeLuca</span>
-  </blockquote>
-</main>
+    <blockquote class="pull-quote" style="font-style:italic; margin: 1.5rem 0; color:#555;">
+      "Coverage should be simple, local, and matched to you."
+      <span style="display:block; margin-top:.5rem;">— Rocco DeLuca</span>
+    </blockquote>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="current-year"></span> Vernal Medicare</p>
+      <p>© <span id="current-year"></span> Vernal Medicare. All rights reserved.</p>
       <p>Email: <a href="mailto:rocco@medicareadvocates.com">rocco@medicareadvocates.com</a> |
          Phone: <a href="tel:+14352195120">+1 (435) 219-5120</a></p>
-      <p class="tiny-note">Not connected with or endorsed by the U.S. government or the federal Medicare program.</p>
+      <p style="font-size:.9rem;opacity:.9">
+        Not connected with or endorsed by the U.S. government or the federal Medicare program.
+        By calling this number, you will be connected to a licensed insurance agent/producer.
+      </p>
       <p><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
     </div>
     <p class="powered-by">
       Powered by cozelosdata
-      <a href="https://cozelosdata.com/" target="_blank" rel="noopener" class="powered-link">
+      <a href="https://cozelosdata.com/" target="_blank" rel="noopener noreferrer" class="powered-link">
         <picture>
           <source srcset="pictures/cozelos.webp" type="image/webp">
           <img src="pictures/cozelos.webp" alt="Cozelos Data" class="powered-logo" width="120" height="24" loading="lazy" decoding="async">
@@ -179,22 +223,51 @@
     </p>
   </footer>
 
-  <!-- Tiny active-nav helper (same across pages) -->
+  <!-- Scripts -->
   <script>
-    (function() {
-      const here = location.pathname.replace(/\/$/, '') || '/';
+    // Active-nav + year
+    (function () {
+      const hereRaw = location.pathname.replace(/\/$/, '') || '/';
+      const here = (hereRaw === '/index.html') ? '/' : hereRaw;
+
       document.querySelectorAll('.nav-menu a').forEach(a => {
-        const href = a.getAttribute('href');
-        const normalized = (href === 'index.html' || href === './' || href === '/') ? '/' : `/${href}`;
-        if (normalized.replace(/\/$/, '') === here.replace(/\/$/, '')) a.classList.add('active');
+        try {
+          const url = new URL(a.getAttribute('href'), location.origin);
+          const pathRaw = url.pathname.replace(/\/$/, '') || '/';
+          const path = (pathRaw === '/index.html') ? '/' : pathRaw;
+          const hasHash = url.hash && url.hash.length > 0;
+          a.classList.toggle('active', path === here && !hasHash);
+        } catch (e) {}
       });
-      const y = document.getElementById('current-year'); if (y) y.textContent = new Date().getFullYear();
+
+      const y = document.getElementById('current-year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+
+    // Mobile nav toggle
+    (function setupToggle() {
+      const toggleLabel = document.getElementById('nav-toggle-label');
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.querySelector('.main-nav');
+      if (!toggleLabel || !navToggle || !navMenu) return setTimeout(setupToggle, 100);
+      let isToggled = false;
+      function setState(on) {
+        isToggled = on;
+        navToggle.checked = on;
+        navMenu.style.cssText = on ? 'display:block!important' : 'display:none!important';
+        toggleLabel.classList.toggle('open', on);
+        toggleLabel.setAttribute('aria-expanded', on ? 'true' : 'false');
+      }
+      document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => setState(false)));
+      toggleLabel.addEventListener('click', () => setState(!isToggled));
+      toggleLabel.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setState(!isToggled); }
+      });
     })();
   </script>
 
   <!-- 3CX Live Chat -->
   <call-us-selector phonesystem-url="https://1888.3cx.cloud" party="LiveChat956014"></call-us-selector>
   <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
-
 </body>
 </html>

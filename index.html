@@ -493,13 +493,14 @@
 </div>
   </div>
 
-  <a href="pictures/joke2.webp" class="vm-comic" target="_blank" rel="noopener">
+<a href="#" class="vm-comic">
   <img
     src="pictures/joke2.webp"
-    data-alt="pictures/joke4.webp"
-    alt="Medicare marketing joke — dental add-on"
-    loading="lazy">
+    alt="Medicare marketing joke — click to see more"
+    loading="lazy"
+    decoding="async">
 </a>
+
 </div>
 </section>
 
@@ -984,6 +985,8 @@
 <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
 
 <script>
+// Replace your existing vm-comic script with this enhanced version
+
 (function(){
   document.addEventListener('click', function(e){
     const link = e.target.closest('.vm-comic');
@@ -993,19 +996,40 @@
     const img = link.querySelector('img');
     if (!img) return;
 
-    const src = img.getAttribute('src');
-    const alt = img.getAttribute('data-alt');
-    if (!alt) return;
+    // Array of all 5 images to cycle through
+    const images = [
+      'pictures/joke2.webp',
+      'pictures/joke4.webp',
+      'pictures/AetnaLeaving.webp',
+      'pictures/joke13.webp',  // Add your 4th image path here
+      'pictures/joke5.webp'     // Add your 5th image path here
+    ];
 
+    // Get current image
+    const currentSrc = img.getAttribute('src');
+    
+    // Find current index
+    let currentIndex = images.indexOf(currentSrc);
+    
+    // If not found, start from beginning
+    if (currentIndex === -1) currentIndex = 0;
+    
+    // Get next image (cycle back to start after last image)
+    const nextIndex = (currentIndex + 1) % images.length;
+    const nextSrc = images[nextIndex];
+
+    // Apply flip animation
     img.classList.add('is-flipping');
+    
     const onEnd = function(){
       img.removeEventListener('transitionend', onEnd);
-      img.setAttribute('src', alt);
-      img.setAttribute('data-alt', src);
+      img.setAttribute('src', nextSrc);
+      
       requestAnimationFrame(() => requestAnimationFrame(() => {
         img.classList.remove('is-flipping');
       }));
     };
+    
     img.addEventListener('transitionend', onEnd);
   });
 })();
@@ -1125,7 +1149,5 @@
   go(0);
 })();
 </script>
-
-
 </body>
 </html>

@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicare News & Updates | Vernal Medicare</title>
+  <meta name="description" content="Stay informed with the latest Medicare news, updates, and tips for Vernal and the Uintah Basin. Local insights from your trusted Medicare agent.">
+
+  <link rel="canonical" href="https://vernalmedicare.com/news.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vernalmedicare.com/news.html">
+  <meta property="og:title" content="Medicare News & Updates | Vernal Medicare">
+  <meta property="og:description" content="Stay informed with the latest Medicare news and updates for the Uintah Basin.">
+  <meta property="og:image" content="https://vernalmedicare.com/pictures/og-1200x630.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW6ENB89NF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NW6ENB89NF', { anonymize_ip: true });
+  </script>
+
+  <style>
+    /* News Page Specific Styles */
+    .news-header {
+      background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .news-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .news-header p {
+      font-size: 1.2rem;
+      opacity: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      color: white;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      padding: 0 1rem;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .news-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    .news-card-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-date {
+      color: #2c5aa0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: #1e3a5f;
+      line-height: 1.3;
+    }
+
+    .news-excerpt {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .read-more {
+      display: inline-block;
+      color: #2c5aa0;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .read-more:hover {
+      color: #1e3a5f;
+    }
+
+    .read-more::after {
+      content: " →";
+    }
+
+    .news-category {
+      display: inline-block;
+      background: #e8f2ff;
+      color: #2c5aa0;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .featured-news {
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f2ff 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 0 auto 3rem;
+      max-width: 1200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .featured-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .featured-text h2 {
+      color: #1e3a5f;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .featured-image {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .news-header h1 {
+        font-size: 2rem;
+      }
+
+      .featured-content {
+        grid-template-columns: 1fr;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Empty state */
+    .no-news {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #666;
+    }
+
+    .no-news h2 {
+      color: #1e3a5f;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📧 <a href="mailto:rocco@vernalmedicare.com">rocco@vernalmedicare.com</a></span>
+      <span>📞 <a href="tel:+14352195120">+1 (435) 219-5120</a></span>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="main-header">
+    <div class="container header-top">
+      <div class="logo-left">
+        <a href="index.html">
+          <img src="pictures/Rocco.webp" alt="Rocco DeLuca — Vernal Medicare">
+        </a>
+      </div>
+
+      <div class="site-name-center">
+        <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
+          <picture>
+            <source srcset="pictures/medicare-simplified.webp" type="image/webp">
+            <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
+          </picture>
+        </a>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+      </label>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="medigap.html">Medigap</a></li>
+          <li><a href="aca.html">Under-65 Health Insurance</a></li>
+          <li><a href="indemnity.html">Copay Coverage</a></li>
+          <li><a href="life.html">Life Insurance</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html" aria-current="page">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- News Header -->
+  <section class="news-header">
+    <div class="container">
+      <h1>Medicare News & Updates</h1>
+      <p>Stay informed with the latest Medicare information and local updates for the Uintah Basin</p>
+    </div>
+  </section>
+
+  <!-- Featured Video -->
+  <div class="container">
+    <div class="featured-news">
+      <div class="featured-content" style="grid-template-columns: 1fr;">
+        <div class="featured-text" style="text-align: center;">
+          <span class="news-category">Featured Video</span>
+          <h2>Watch out Medicare Scams are on the rise</h2>
+          <p class="news-date">October 21, 2025</p>
+        </div>
+        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+            src="https://www.youtube.com/embed/jYVklWlR5js" 
+            title="Medicare Advantage Plans Explained" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- News Grid -->
+  <div class="container">
+    <div class="news-grid">
+      
+      <!-- Sample Article 1 - Part D Video -->
+      <article class="news-card">
+        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;">
+          <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+            src="https://www.youtube.com/embed/b7xDejaivLE" 
+            title="Understanding Medicare Part D Changes" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="news-card-content">
+          <span class="news-category">Medicare Updates</span>
+          <p class="news-date">October 21, 2025</p>
+          <h2>Understanding Medicare Part D Changes for 2026</h2>
+          <p class="news-excerpt">
+            Important updates to prescription drug coverage are coming in 2026. 
+            Learn how these changes may affect your medications and out-of-pocket costs.
+          </p>
+        </div>
+      </article>
+
+      <!-- Sample Article 2 - 2026 Medicare Changes Video -->
+      <article class="news-card">
+        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;">
+          <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+            src="https://www.youtube.com/embed/RzQeflUCgb0" 
+            title="2026 Medicare Changes" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="news-card-content">
+          <span class="news-category">Medicare Updates</span>
+          <p class="news-date">October 15, 2025</p>
+          <h2>Important Medicare Changes Coming in 2026</h2>
+          <p class="news-excerpt">
+            Get informed about the key Medicare changes for 2026. Learn what's new and how these updates may impact your coverage and costs.
+          </p>
+        </div>
+      </article>
+
+      <!-- Sample Article 3 - Medicare Scam Warning Video -->
+      <article class="news-card">
+        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;">
+          <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+            src="https://www.youtube.com/embed/D_r_sUA4LoU" 
+            title="Medicare Phone Scam Warning" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="news-card-content">
+          <span class="news-category">Consumer Protection</span>
+          <p class="news-date">October 10, 2025</p>
+          <h2>Warning: Medicare Scams Over the Phone</h2>
+          <p class="news-excerpt">
+            Stay safe from Medicare scammers! Learn how to identify fraudulent phone calls 
+            and protect your personal information from scammers pretending to be from Medicare.
+          </p>
+        </div>
+      </article>
+
+      <!-- Add more articles here following the same pattern -->
+
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <section class="help" style="margin-top: 4rem;">
+    <div class="container" style="text-align: center;">
+      <h2>Questions About Medicare?</h2>
+      <p>Schedule a free consultation to discuss your coverage options for the Uintah Basin.</p>
+      <p style="margin-top: 1.5rem;">
+        <a href="tel:+14352195120" class="button">Call +1 (435) 219-5120</a>
+        <a href="mailto:rocco@vernalmedicare.com" class="button">Email Rocco</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="current-year"></span> Vernal Medicare. All rights reserved.</p>
+      <p>Email: <a href="mailto:rocco@vernalmedicare.com">rocco@vernalmedicare.com</a> |
+         Phone: <a href="tel:+14352195120">+1 (435) 219-5120</a></p>
+      <p style="font-size:.9rem;opacity:.9">
+        Not connected with or endorsed by the U.S. government or the federal Medicare program.
+        By calling this number, you will be connected to a licensed insurance agent/producer.
+      </p>
+      <p><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
+    </div>
+    <p class="powered-by">
+      Powered by cozelosdata
+      <a href="https://cozelosdata.com/" target="_blank" rel="noopener noreferrer" class="powered-link">
+        <picture>
+          <source srcset="pictures/cozelos.webp" type="image/webp">
+          <img src="pictures/cozelos.webp" alt="Cozelos Data" class="powered-logo" width="120" height="24" loading="lazy" decoding="async">
+        </picture>
+      </a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Active-nav + year
+    (function () {
+      const hereRaw = location.pathname.replace(/\/$/, '') || '/';
+      const here = (hereRaw === '/index.html') ? '/' : hereRaw;
+
+      document.querySelectorAll('.nav-menu a').forEach(a => {
+        try {
+          const url = new URL(a.getAttribute('href'), location.origin);
+          const pathRaw = url.pathname.replace(/\/$/, '') || '/';
+          const path = (pathRaw === '/index.html') ? '/' : pathRaw;
+          const hasHash = url.hash && url.hash.length > 0;
+          a.classList.toggle('active', path === here && !hasHash);
+        } catch (e) {}
+      });
+
+      const y = document.getElementById('current-year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+
+    // Mobile nav toggle
+    (function setupToggle() {
+      const toggleLabel = document.getElementById('nav-toggle-label');
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.querySelector('.main-nav');
+      if (!toggleLabel || !navToggle || !navMenu) return setTimeout(setupToggle, 100);
+      let isToggled = false;
+      function setState(on) {
+        isToggled = on;
+        navToggle.checked = on;
+        navMenu.style.cssText = on ? 'display:block!important' : 'display:none!important';
+        toggleLabel.classList.toggle('open', on);
+        toggleLabel.setAttribute('aria-expanded', on ? 'true' : 'false');
+      }
+      document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => setState(false)));
+      toggleLabel.addEventListener('click', () => setState(!isToggled));
+      toggleLabel.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setState(!isToggled); }
+      });
+    })();
+  </script>
+
+  <!-- 3CX Live Chat -->
+  <call-us-selector phonesystem-url="https://1888.3cx.cloud" party="LiveChat956014"></call-us-selector>
+  <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+</body>
+</html>

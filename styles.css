@@ -140,7 +140,7 @@ p {
   line-height: 1.1;
   padding: 0.45rem 0.8rem;
   display: inline-block;
-  white-space: nowrap;     /* prevent “ACA (Under–65)” and “Life Insurance” from breaking */
+  white-space: nowrap;     /* prevent "ACA (Under–65)" and "Life Insurance" from breaking */
   transition: color 0.3s ease;
 }
 
@@ -1256,14 +1256,14 @@ main a:not(.btn):not(.payment-btn):hover {
 }
 
 /* 1) Content links (do NOT style buttons) */
-main a:not(.btn):not(.payment-btn):not(.button):not(.cta) {
+main a:not(.btn):not(.payment-btn):not(.button):not(.cta):not(.enroll-btn) {
   color: #9e0853;
   text-decoration: none;
   font-weight: bold;
   transition: color .3s ease, text-decoration .3s ease;
 }
-main a:not(.btn):not(.payment-btn):not(.button):not(.cta):hover,
-main a:not(.btn):not(.payment-btn):not(.button):not(.cta):focus {
+main a:not(.btn):not(.payment-btn):not(.button):not(.cta):not(.enroll-btn):hover,
+main a:not(.btn):not(.payment-btn):not(.button):not(.cta):not(.enroll-btn):focus {
   color: #9e0853;
   text-decoration: underline;
 }
@@ -1499,7 +1499,7 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
     inset 0 0 0 1px rgba(255,255,255,.35);  /* thin inner rim */
 }
 
-/* “Floor” shadow for depth (sits under the frame) */
+/* "Floor" shadow for depth (sits under the frame) */
 .vm--3d::before{
   content:"";
   position:absolute;
@@ -1860,7 +1860,9 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
 }
 
 /* Medigap intro – right image card frame */
-#medigap-intro .mg-two-up figure.mg-card{
+#medigap-intro .mg-two-
+
+up figure.mg-card{
   position: relative;
   background: #fff;
   border: 1px solid rgba(11,42,58,.12);
@@ -2054,8 +2056,6 @@ iframe {
 
 /* ===========================================
    LOGO - FINAL VERSION
-   Delete ALL .logo-left rules in your CSS,
-   then paste this at the VERY BOTTOM of styles.css
    =========================================== */
 
 .logo-left {
@@ -2126,5 +2126,116 @@ iframe {
     height: 90px;
     width: 90px;
     margin-left: -8px;
+  }
+}
+
+/* ===================================================
+   ENROLL BUTTON - Red, Bigger, Eye-catching
+   =================================================== */
+
+.enroll-btn,
+a.enroll-btn {
+  background-color: #dc3545 !important; /* Bright red */
+  color: white !important;
+  font-size: 1.4rem !important; /* Bigger text */
+  padding: 1.1rem 2.8rem !important; /* More padding */
+  font-weight: 700 !important; /* Bold */
+  border: none !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.35) !important; /* Red shadow */
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  -webkit-text-fill-color: white !important; /* Safari fix */
+}
+
+/* Hover state */
+.enroll-btn:hover,
+a.enroll-btn:hover {
+  background-color: #c82333 !important; /* Darker red */
+  transform: translateY(-3px) !important; /* Lift effect */
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.45) !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Active/Click state */
+.enroll-btn:active,
+a.enroll-btn:active {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3) !important;
+}
+
+/* Focus state for accessibility */
+.enroll-btn:focus,
+a.enroll-btn:focus {
+  outline: 3px solid #dc3545 !important;
+  outline-offset: 3px !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* All states keep white text */
+.enroll-btn:visited,
+a.enroll-btn:visited,
+.enroll-btn:link,
+a.enroll-btn:link {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Ensure enroll button stays white in hero section */
+.hero-text .enroll-btn,
+.hero-text a.enroll-btn,
+body .enroll-btn,
+body a.enroll-btn {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-decoration: none !important;
+}
+
+.hero-text .enroll-btn:hover,
+.hero-text a.enroll-btn:hover,
+.hero-text .enroll-btn:focus,
+.hero-text a.enroll-btn:focus,
+.hero-text .enroll-btn:active,
+.hero-text a.enroll-btn:active,
+.hero-text .enroll-btn:visited,
+.hero-text a.enroll-btn:visited,
+body .enroll-btn:hover,
+body a.enroll-btn:hover,
+body .enroll-btn:focus,
+body a.enroll-btn:focus,
+body .enroll-btn:active,
+body a.enroll-btn:active,
+body .enroll-btn:visited,
+body a.enroll-btn:visited {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Mobile: slightly smaller but still prominent */
+@media (max-width: 768px) {
+  .enroll-btn,
+  a.enroll-btn {
+    font-size: 1.2rem !important;
+    padding: 0.9rem 2rem !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 12px auto !important;
+    text-align: center !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .enroll-btn,
+  a.enroll-btn {
+    font-size: 1.1rem !important;
+    padding: 0.85rem 1.6rem !important;
   }
 }

@@ -2239,3 +2239,222 @@ body a.enroll-btn:visited {
     padding: 0.85rem 1.6rem !important;
   }
 }
+/* ========================================
+   VOICE-TRIGGER LANDING PAGES
+   ======================================== */
+
+/* Simple header for voice pages */
+.simple-header {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.simple-header a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.simple-header a:hover {
+  text-decoration: underline;
+}
+
+/* Main voice page container */
+.voice-page {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.voice-page h1 {
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.voice-page h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 0.5rem;
+}
+
+.voice-page h3 {
+  color: #555;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.voice-page h4 {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.voice-page p {
+  margin-bottom: 1rem;
+}
+
+.voice-page ul, 
+.voice-page ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.voice-page li {
+  margin-bottom: 0.5rem;
+}
+
+.voice-page strong {
+  color: #1a1a1a;
+}
+
+.voice-page em {
+  font-style: italic;
+  color: #666;
+}
+
+/* Answer content sections */
+.answer-content,
+.agent-bio,
+.part-d-info,
+.enrollment-info {
+  margin-bottom: 2rem;
+}
+
+/* Contact info box */
+.contact-info {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid #0066cc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info h2 {
+  margin-top: 0;
+  color: #0066cc;
+  border-bottom: none;
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+}
+
+.contact-info a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* CTA buttons */
+.cta-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-buttons .button:hover {
+  background: #0052a3;
+  text-decoration: none;
+}
+
+/* Service area box */
+.service-area {
+  background: #fafafa;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.service-area h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.service-area p {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Simple footer */
+.simple-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.simple-footer p {
+  margin: 0.5rem 0;
+}
+
+.simple-footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.simple-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .voice-page {
+    padding: 1rem 0.75rem;
+  }
+  
+  .voice-page h1 {
+    font-size: 1.5rem;
+  }
+  
+  .voice-page h2 {
+    font-size: 1.25rem;
+  }
+  
+  .voice-page h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info {
+    padding: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-buttons .button {
+    width: 100%;
+    text-align: center;
+  }
+}

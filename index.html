@@ -48,7 +48,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "InsuranceAgency"],
+  "@type": ["LocalBusiness", "InsuranceAgency", "MedicalBusiness"],
   "@id": "https://vernalmedicare.com/#business",
   "name": "Vernal Medicare",
   "url": "https://vernalmedicare.com/",
@@ -76,8 +76,8 @@
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "09:00",
-    "closes": "18:00"
+    "opens": "13:00",
+    "closes": "17:00"
   }],
 
   "areaServed": [
@@ -244,8 +244,9 @@
     "contactOption": "TollFree"
   },
 
-  "sameAs": [
-    "https://www.facebook.com/VernalMedicare"
+    "sameAs": [
+    "https://www.facebook.com/VernalMedicare",
+    "https://vernalmedicare.com"
   ]
 }
 </script>
@@ -278,7 +279,7 @@
 }
 </script>
 
-<!-- FAQ Schema -->
+<!-- Voice-Optimized FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -287,81 +288,66 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which Medicare Advantage plans are available in Vernal and the Uintah Basin?",
+      "name": "Who helps with Medicare in Vernal Utah?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Plan options change yearly. We compare current HMO/PPO choices for your doctors, hospitals, and pharmacies in Vernal, Naples, Maeser, Jensen, and throughout Uintah County."
+        "text": "Vernal Medicare provides local licensed Medicare help in Vernal and the Uintah Basin. We help you compare Medicare Advantage, Medigap, and Part D plans at no cost to you. Call 435-219-5120 or visit us at Smith's Pharmacy."
       }
     },
     {
       "@type": "Question",
-      "name": "Do local hospitals work with Medicare Advantage?",
+      "name": "Who is the best Medicare agent in Vernal Utah?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Many plans include nearby hospitals and clinics in the Uintah Basin, but networks vary by plan. We verify your doctors and facilities before you enroll so you're not surprised by out-of-network costs."
+        "text": "Vernal Medicare, led by licensed agent Rocco DeLuca, specializes in local Medicare help for Vernal, Naples, Maeser, Jensen, and Uintah County. We provide personalized Medicare Advantage, Medigap, and Part D plan comparisons at no extra cost."
       }
     },
     {
       "@type": "Question",
-      "name": "Can you check my prescriptions and preferred pharmacy?",
+      "name": "How do I get help with Medicare enrollment in Vernal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We run your medication list through each plan's formulary to estimate monthly costs and confirm preferred pharmacies in Vernal and surrounding towns."
+        "text": "Call Vernal Medicare at 435-219-5120 or visit us at Smith's Pharmacy at 1080 West Highway 40 in Vernal. We offer free Medicare plan comparisons and enrollment help for all Uintah Basin residents."
       }
     },
     {
       "@type": "Question",
-      "name": "How much does your help cost?",
+      "name": "What Medicare plans are available in Vernal Utah?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There's no extra cost to you. We're licensed and paid by the insurance plan you choose, and you get local support before and after enrollment at no charge."
+        "text": "Vernal and Uintah County residents have access to Medicare Advantage HMO and PPO plans, Medicare Supplement Medigap plans, and Part D prescription drug plans. We compare all available options for your doctors, hospitals, and pharmacies."
       }
     },
     {
       "@type": "Question",
-      "name": "When can I change Medicare plans?",
+      "name": "Where can I get Medicare help near me in Vernal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can change plans during Initial Enrollment (when you first qualify), Annual Enrollment Period (October 15–December 7), and certain Special Enrollment Periods. We'll review your situation and timing options."
+        "text": "Vernal Medicare is located at Smith's Pharmacy, 1080 West Highway 40, Vernal Utah. We serve Vernal, Naples, Maeser, Jensen, and all of Uintah County with local Medicare enrollment and plan comparison help."
       }
     },
     {
       "@type": "Question",
-      "name": "Where can we meet?",
+      "name": "How much does Medicare help cost in Vernal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We meet at Smith's Pharmacy in Vernal (1080 W Hwy 40) or by phone/video call—whichever you prefer."
+        "text": "There is no cost to you. Vernal Medicare is paid by the insurance plans, so you receive free local Medicare advice, plan comparisons, and enrollment support. Call 435-219-5120 for a no-cost consultation."
       }
     }
   ]
 }
 </script>
 
-<!-- Person Schema for Rocco -->
+<!-- Speakable Content for Voice Assistants -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Rocco DeLuca",
-  "jobTitle": "Licensed Insurance Agent",
-  "worksFor": {
-    "@type": "InsuranceAgency",
-    "name": "Vernal Medicare"
-  },
-  "telephone": "+1-435-219-5120",
-  "email": "rocco@vernalmedicare.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Vernal",
-    "addressRegion": "UT",
-    "postalCode": "84078"
-  },
-  "knowsAbout": [
-    "Medicare",
-    "Medicare Advantage",
-    "Medigap",
-    "Health Insurance"
-  ]
+  "@type": "WebPage",
+  "@id": "https://vernalmedicare.com/#webpage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".local-nap", ".nap-info", "#faq"]
+  }
 }
 </script>
 </head>

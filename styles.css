@@ -341,7 +341,7 @@ p {
 
 .hero-banner {
   width: 100%;
-  height: 480px;           /* was 600px */
+  height: 320px;           /* was 600px */
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -1518,7 +1518,7 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
 /* === Reviews Carousel (namespaced) === */
 #vm-reviews {
   position: relative;
-  max-width: 1100px;
+  max-width: 800px; /* make Reviews Carousel wider  */
   margin: 24px auto 48px;
   padding: 8px 12px 28px;
   border-radius: 18px;
@@ -1580,7 +1580,8 @@ body .cta:hover, body .cta:focus, body .cta:active, body .cta:visited {
 #vm-reviews .vm-reviews__nav {
   position: absolute;
   top: 50%;
-  translate: 0 -50%;
+  transform: translateY(-50%); /* Centra perfettamente l'asse verticale */
+  z-index: 20;
   border: 0;
   width: 40px;
   height: 40px;
@@ -2457,4 +2458,58 @@ body a.enroll-btn:visited {
     width: 100%;
     text-align: center;
   }
+}
+
+/* ========================================
+   CAROUSEL ARROW FIX - Vertical Centering
+   ======================================== */
+
+/* Reviews Carousel */
+#vm-reviews .vm-reviews__nav,
+#vm-reviews button.vm-reviews__nav,
+#vm-reviews .vm-reviews__prev,
+#vm-reviews .vm-reviews__next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    z-index: 5001 !important;
+    bottom: auto !important;
+}
+
+/* Smile/Comic Carousel */
+.smile .smile-arrow,
+.smile button.smile-arrow,
+.smile .smile-arrow.prev,
+.smile .smile-arrow.next,
+.smile-wrap .smile-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    translate: none !important;
+    z-index: 5001 !important;
+    bottom: auto !important;
+}
+
+/* Spiritual Thoughts Carousel */
+#vm-spirit .spirit-nav,
+#vm-spirit button.spirit-nav,
+#vm-spirit .spirit-prev,
+#vm-spirit .spirit-next,
+#vm-spirit .spirit-wrap .spirit-nav {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    translate: none !important;
+    z-index: 5001 !important;
+    bottom: auto !important;
+}
+
+/* Ensure parent containers are positioned */
+#vm-reviews,
+.smile-wrap,
+#vm-spirit .spirit-wrap {
+    position: relative !important;
 }

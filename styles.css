@@ -2513,3 +2513,201 @@ body a.enroll-btn:visited {
 #vm-spirit .spirit-wrap {
     position: relative !important;
 }
+
+/* ========================================
+   CMS COMPLIANCE STYLING
+   Add this section to the END of styles.css
+   ======================================== */
+
+/* Main compliance block - prominent placement after hero */
+.cms-compliance {
+  background: #fffbf0;
+  border: 2px solid #d97706;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+}
+
+.cms-compliance h3 {
+  color: #92400e;
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.cms-compliance p {
+  margin: 0.75rem 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left; /* Override any center alignment */
+}
+
+.cms-compliance strong {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.cms-compliance a {
+  color: #002b49; /* Match your brand navy */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.cms-compliance a:hover {
+  color: #9e0853; /* Match your brand pink */
+}
+
+/* Compact version for secondary pages */
+.cms-disclaimer-compact {
+  background: #f9fafb;
+  border-left: 4px solid #d97706;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem auto;
+  max-width: 1100px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cms-disclaimer-compact p {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.cms-disclaimer-compact strong {
+  color: #1f2937;
+}
+
+.cms-disclaimer-compact a {
+  color: #002b49;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.cms-disclaimer-compact a:hover {
+  color: #9e0853;
+}
+
+/* Enhanced footer disclosure */
+.cms-footer-disclosure {
+  background: #f3f4f6;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 3px solid #d97706;
+}
+
+.cms-footer-disclosure .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cms-footer-disclosure h4 {
+  color: #1f2937;
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.cms-footer-disclosure p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.75rem 0;
+  color: #374151;
+  text-align: left;
+}
+
+.cms-footer-disclosure strong {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.cms-footer-disclosure a {
+  color: #002b49;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.cms-footer-disclosure a:hover {
+  color: #9e0853;
+}
+
+.cms-footer-disclosure em {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Mobile responsiveness for compliance sections */
+@media (max-width: 768px) {
+  .cms-compliance,
+  .cms-disclaimer-compact {
+    font-size: 0.85rem;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .cms-compliance h3 {
+    font-size: 1rem;
+  }
+
+  .cms-compliance p,
+  .cms-disclaimer-compact p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .cms-footer-disclosure {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .cms-footer-disclosure h4 {
+    font-size: 1rem;
+  }
+
+  .cms-footer-disclosure p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Ensure compliance sections don't get section hover effects */
+.cms-compliance:hover,
+.cms-disclaimer-compact:hover,
+.cms-footer-disclosure:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+}
+
+/* Make sure compliance links are visible in all contexts */
+main .cms-compliance a,
+main .cms-disclaimer-compact a,
+.cms-footer-disclosure a {
+  color: #002b49 !important;
+  text-decoration: underline !important;
+}
+
+main .cms-compliance a:hover,
+main .cms-disclaimer-compact a:hover,
+.cms-footer-disclosure a:hover {
+  color: #9e0853 !important;
+}
+
+/* Print styles - ensure compliance text is always visible when printed */
+@media print {
+  .cms-compliance,
+  .cms-disclaimer-compact,
+  .cms-footer-disclosure {
+    background: white;
+    border: 1px solid #000;
+    page-break-inside: avoid;
+  }
+
+  .cms-compliance *,
+  .cms-disclaimer-compact *,
+  .cms-footer-disclosure * {
+    color: #000 !important;
+  }
+}

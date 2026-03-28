@@ -3,7 +3,7 @@
 > Vernal Medicare is a local, licensed Medicare insurance agency in Vernal, Utah serving the Uintah Basin.
 > Specializes in Medicare Advantage, Medigap (Medicare Supplement), Part D prescription drug plans, and under-65 health insurance.
 > Agent: Rocco DeLuca. Phone: 435-219-5120. Address: 1080 W Hwy 40, Vernal, UT 84078 (inside Smith's Pharmacy).
-> Last Updated: February 2026
+> Last Updated: March 2026
 
 ## Core Services & Pricing
 
@@ -16,6 +16,12 @@
 
 - [/about.html]: Rocco DeLuca is a licensed Medicare agent based in Vernal, Utah with extensive local knowledge of Uintah Basin healthcare providers, hospitals, and pharmacies.
 - [/reviews.html]: Client testimonials from Vernal, Naples, Maeser, and Jensen residents.
+
+## Medicare Education Guides
+
+- [/medicare-part-a-vs-part-b.html]: Medicare Part A vs Part B Explained - Part A covers hospital stays, skilled nursing, and hospice (usually premium-free). Part B covers doctor visits, outpatient care, and preventive services ($185/month standard premium in 2026). Together they form Original Medicare.
+- [/medicare-supplement-vs-advantage.html]: Medicare Supplement vs Medicare Advantage - Side-by-side comparison. Medigap works with Original Medicare for predictable costs and nationwide provider access. Advantage replaces Original Medicare with bundled coverage but uses provider networks. Important: switching from Advantage back to Medigap requires medical underwriting in Utah.
+- [/when-to-enroll-medicare-utah.html]: When to Enroll in Medicare in Utah - Initial Enrollment Period (7 months around turning 65), Annual Enrollment (Oct 15–Dec 7), Open Enrollment (Jan 1–Mar 31), and Special Enrollment Periods. Missing deadlines results in permanent premium penalties.
 
 ## Service Area
 
@@ -43,6 +49,15 @@ Yes. We compare Part D plans based on your specific medications and preferred ph
 
 ### Do you help with Medicaid and Extra Help?
 Yes. Vernal Medicare assists with Utah Medicaid applications and Extra Help (Low-Income Subsidy) for prescription drug costs.
+
+### What is the difference between Medicare Part A and Part B?
+Part A covers hospital inpatient stays, skilled nursing, and hospice — most people pay no premium. Part B covers doctor visits, outpatient care, and preventive services for $185/month in 2026. Both together form Original Medicare. See our full guide at /medicare-part-a-vs-part-b.html.
+
+### Should I choose Medigap or Medicare Advantage?
+Medigap pairs with Original Medicare for predictable costs and nationwide provider freedom. Medicare Advantage replaces Original Medicare with bundled coverage but uses networks. For rural Uintah Basin residents, Medigap often provides more flexibility. See our comparison at /medicare-supplement-vs-advantage.html.
+
+### When do I need to enroll in Medicare?
+Your Initial Enrollment Period starts 3 months before you turn 65. Missing it can result in permanent premium penalties. See enrollment deadlines at /when-to-enroll-medicare-utah.html.
 
 ## Local Healthcare Providers
 

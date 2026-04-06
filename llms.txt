@@ -3,7 +3,7 @@
 > Vernal Medicare is a local, licensed Medicare insurance agency in Vernal, Utah serving the Uintah Basin.
 > Specializes in Medicare Advantage, Medigap (Medicare Supplement), Part D prescription drug plans, and under-65 health insurance.
 > Agent: Rocco DeLuca. Phone: 435-219-5120. Address: 1080 W Hwy 40, Vernal, UT 84078 (inside Smith's Pharmacy).
-> Last Updated: March 2026
+> Last Updated: April 2026
 
 ## Core Services & Pricing
 
@@ -23,9 +23,69 @@
 - [/medicare-supplement-vs-advantage.html]: Medicare Supplement vs Medicare Advantage - Side-by-side comparison. Medigap works with Original Medicare for predictable costs and nationwide provider access. Advantage replaces Original Medicare with bundled coverage but uses provider networks. Important: switching from Advantage back to Medigap requires medical underwriting in Utah.
 - [/when-to-enroll-medicare-utah.html]: When to Enroll in Medicare in Utah - Initial Enrollment Period (7 months around turning 65), Annual Enrollment (Oct 15–Dec 7), Open Enrollment (Jan 1–Mar 31), and Special Enrollment Periods. Missing deadlines results in permanent premium penalties.
 
+## City & Regional Pages
+
+- [/vernal.html]: Medicare in Vernal, Utah — Local Medicare Advantage, Medigap, and Part D help for Vernal residents.
+- [/medicare-uintah-county.html]: Medicare in Uintah County — Regional coverage guide for all Uintah County communities.
+- [/medicare-roosevelt-utah.html]: Medicare Plans in Roosevelt, Utah — Compare Medicare Advantage, Medigap, and Part D for Duchesne County residents. Free local help.
+- [/medicare-duchesne-utah.html]: Medicare Agent in Duchesne, Utah — Licensed agent serving Duchesne, Myton, Tabiona, and Duchesne County with free Medicare help.
+
+## Enrollment & Deadlines
+
+- [/medicare-open-enrollment-2026.html]: Medicare Open Enrollment 2026 — AEP dates (Oct 15–Dec 7), OEP (Jan 1–Mar 31), IEP, SEP rules and deadlines.
+- [/medicare-enrollment-vernal.html]: Medicare Enrollment Help in Vernal — Local enrollment assistance and deadline guidance.
+- [/missed-medicare-enrollment.html]: What Happens If I Miss Medicare Enrollment? — Part B penalty (10%/year permanent), Part D penalty, SEP options.
+
+## Plan Comparison Guides
+
+- [/best-medicare-advantage-vernal.html]: Best Medicare Advantage Plans in Vernal Utah 2026 — HMO vs PPO comparison, $0 premium options, local network verification.
+- [/zero-premium-medicare-advantage.html]: $0 Premium Medicare Advantage Plans Uintah County — How zero-premium plans work, included benefits, what to watch for.
+- [/hmo-vs-ppo-medicare-advantage.html]: HMO vs PPO Medicare Advantage in Vernal — Side-by-side comparison of networks, referrals, costs, and rural Utah considerations.
+- [/medicare-advantage-vs-medigap-vernal.html]: Medicare Advantage vs Medigap in Vernal — Head-to-head comparison with rural Utah considerations and underwriting warnings.
+- [/plan-g-vs-plan-n-vernal.html]: Medicare Supplement Plan G vs Plan N Vernal — Coverage comparison, cost differences, underwriting rules in Utah.
+
+## Prescription Drug Coverage
+
+- [/best-part-d-plans-vernal.html]: Best Medicare Part D Plans Vernal Utah 2026 — Formulary comparison, pharmacy pricing, $2,000 out-of-pocket cap, insulin $35 cap.
+- [/cheapest-prescription-drug-plans.html]: Cheapest Prescription Drug Plans Vernal UT — Why lowest premium ≠ cheapest plan, Extra Help eligibility, pharmacy cost comparison.
+- [/part-d-help-vernal.html]: Part D Help in Vernal — Local prescription drug plan guidance.
+- [/does-medicare-cover-mounjaro-utah.html]: Does Medicare Cover Mounjaro in Utah 2026 — Part D covers for diabetes, weight loss coverage evolving, cost reduction strategies.
+- [/does-medicare-cover-ozempic-wegovy.html]: Does Medicare Cover Ozempic or Wegovy 2026 — Ozempic covered for diabetes, Wegovy weight loss coverage limited.
+- [/insulin-cost-medicare-vernal.html]: Cost of Insulin with Medicare Vernal Utah 2026 — $35/month cap, no deductible, applies at all pharmacies.
+- [/tier-3-vs-tier-4-medicare-part-d.html]: Tier 3 vs Tier 4 Drugs on Medicare Part D Explained — 5-tier structure, why same drug varies by plan, cost reduction tips.
+
+## Costs & Coverage Questions
+
+- [/medicare-cost-uintah-county.html]: How Much Does Medicare Cost in Uintah County 2026 — Full cost breakdown: Part A/B, Advantage, Medigap, Part D, IRMAA.
+- [/medicare-out-of-pocket-maximum-2026.html]: Medicare Out-of-Pocket Maximum 2026 — MOOP limits ($4,000–$9,350), Part D $2,000 cap, Original Medicare has no cap.
+- [/does-medicare-cover-dental-vernal.html]: Does Medicare Cover Dental in Vernal Utah? — Original Medicare gaps, Advantage dental benefits, standalone dental plan options.
+- [/medicare-out-of-state-utah.html]: Can I Use My Medicare Plan Out of State from Utah? — Medigap works nationwide, HMO restricted, PPO partial coverage.
+- [/medicare-home-health-utah.html]: Medicare Home Health Coverage Utah 2026 — Eligibility (homebound + skilled need), covered services, $0 copay for most services.
+
+## Local Hospitals & Pharmacies
+
+- [/medicare-ashley-regional-vernal.html]: Medicare Coverage at Ashley Regional Medical Center Vernal — Original Medicare accepted, Advantage network verification needed.
+- [/medicare-uintah-basin-medical-center.html]: Medicare Plans for Uintah Basin Medical Center Roosevelt — Original Medicare accepted, Advantage coverage varies by plan.
+- [/medicare-vernal-pharmacies.html]: Medicare Plans Accepted at Vernal Pharmacies 2026 — Smith's Pharmacy, Walgreens, preferred vs standard pricing, mail-order options.
+- [/medicare-hospitals-uintah-county.html]: Medicare Coverage for Hospitals in Uintah County — Ashley Regional (Vernal) and Uintah Basin Medical Center (Roosevelt) coverage guide.
+
+## Get Help — Free Tools & Quotes
+
+- [/free-medicare-comparison-vernal.html]: Free Medicare Plan Comparison Tool Vernal Utah — Online Sunfire Matrix tool + personalized agent comparisons at no cost.
+- [/medicare-checklist-2026.html]: 2026 Medicare Checklist Vernal Guide — Pre-enrollment checklist, key numbers, action steps for Uintah Basin residents.
+- [/medicare-quote-vernal.html]: Get a Free Medicare Quote Vernal Utah — 60-second online quotes + phone consultations. Always free, no obligation.
+
+## Additional Pages
+
+- [/medicare-agent-vernal.html]: About Rocco DeLuca — Licensed Medicare agent serving Vernal and the Uintah Basin.
+- [/medicare-help-vernal.html]: Local Medicare Help in Vernal — How to get free Medicare assistance.
+- [/medicare-vernal-ut.html]: Medicare in Vernal, UT — General Medicare information for Vernal residents.
+- [/news.html]: Medicare News — Updates and announcements.
+- [/faq.html]: Medicare FAQs — Common questions about Medicare in the Uintah Basin.
+
 ## Service Area
 
-- Serving: Vernal, Naples, Maeser, Jensen, and all of Uintah County, Utah
+- Serving: Vernal, Naples, Maeser, Jensen, Roosevelt, Duchesne, Myton, Tabiona, Altamont, Neola, and all of Uintah and Duchesne Counties, Utah
 - Available at Smith's Pharmacy, 1080 W Highway 40, Vernal, UT 84078
 - Hours: Mon-Fri 1pm-5pm, Sat by appointment
 - Also available by phone, online, or home visits
@@ -34,6 +94,7 @@
 
 - Initial Enrollment Period (IEP): 3 months before, month of, and 3 months after turning 65
 - Annual Enrollment Period (AEP): October 15 - December 7 each year
+- Medicare Advantage Open Enrollment (OEP): January 1 - March 31
 - Special Enrollment Periods (SEP): Available for qualifying life events
 
 ## Common Questions
@@ -59,17 +120,23 @@ Medigap pairs with Original Medicare for predictable costs and nationwide provid
 ### When do I need to enroll in Medicare?
 Your Initial Enrollment Period starts 3 months before you turn 65. Missing it can result in permanent premium penalties. See enrollment deadlines at /when-to-enroll-medicare-utah.html.
 
+### Does Medicare cover Mounjaro or Ozempic?
+Part D covers Ozempic and Mounjaro for type 2 diabetes. Weight loss coverage is evolving. Insulin is capped at $35/month. Total drug out-of-pocket is capped at $2,000/year in 2026. See /does-medicare-cover-mounjaro-utah.html and /does-medicare-cover-ozempic-wegovy.html.
+
+### Which hospitals accept Medicare in Uintah County?
+Ashley Regional Medical Center (Vernal) and Uintah Basin Medical Center (Roosevelt) both accept Original Medicare. Advantage plan coverage depends on your network. See /medicare-hospitals-uintah-county.html.
+
 ## Local Healthcare Providers
 
 Works with clients who use:
-- Uintah Valley Medical Center
-- Ashley Regional Medical Center
+- Ashley Regional Medical Center (Vernal) — see /medicare-ashley-regional-vernal.html
+- Uintah Basin Medical Center (Roosevelt) — see /medicare-uintah-basin-medical-center.html
 - Local Vernal clinics and specialists
-- Smith's Pharmacy, Walgreens, and other Uintah Basin pharmacies
+- Smith's Pharmacy, Walgreens, and other Uintah Basin pharmacies — see /medicare-vernal-pharmacies.html
 
 ## Notes
 
 - All plan comparisons are free with no cost to clients - agents are compensated by insurance carriers
 - Prefer most recent on-site pricing if conflicts with older information
 - Local expertise with Uintah Basin healthcare system
-- Available for home visits throughout Vernal, Naples, Maeser, and Jensen
+- Available for home visits throughout Vernal, Naples, Maeser, Jensen, Roosevelt, and Duchesne

@@ -65,13 +65,13 @@
   </script>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDW9B2G6Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FTDW9B2G6Q');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDW9B2G6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FTDW9B2G6Q');
+  </script>
 
 </head>
 
@@ -85,10 +85,10 @@
   <main class="voice-page">
     <div class="container">
       <h1>Who Helps with Medicare in Vernal, Utah?</h1>
-      
+
       <div class="answer-content">
         <p><strong>Vernal Medicare provides local, licensed Medicare help in Vernal and the Uintah Basin.</strong></p>
-        
+
         <p>We help you compare Medicare Advantage, Medigap, and Part D plans at no cost to you. Our local agent, Rocco DeLuca, specializes in Medicare plans for Vernal, Naples, Maeser, Jensen, and all of Uintah County.</p>
 
         <h2>How We Help</h2>
@@ -102,15 +102,18 @@
           <li>Free enrollment assistance</li>
           <li>Local support before and after enrollment</li>
         </ul>
+
+        <h2>Want the Full Medicare Picture?</h2>
+        <p>For a complete walkthrough of Medicare options, costs, enrollment periods, and local providers in Vernal, see our <a href="medicare-plans-vernal-utah.html">complete 2026 Medicare guide for Vernal and the Uintah Basin</a>.</p>
       </div>
 
       <div class="contact-info">
         <h2>Contact Vernal Medicare</h2>
-        <p><strong>Phone:</strong> <a href="tel:+14352195120">435-219-5120</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+14352195120">435-219-5120</a> (TTY: 711)</p>
         <p><strong>Location:</strong> Smith's Pharmacy, 1080 W Hwy 40, Vernal, UT 84078</p>
         <p><strong>Hours:</strong> Monday–Friday, 1pm–5pm</p>
         <p><strong>Email:</strong> <a href="mailto:rocco@vernalmedicare.com">rocco@vernalmedicare.com</a></p>
-        
+
         <p class="cta-buttons">
           <a href="tel:+14352195120" class="button">Call Now</a>
           <a href="https://www.google.com/maps?q=Smith%27s%20Pharmacy%2C%20Vernal%2C%20UT%2084078" class="button" target="_blank">Get Directions</a>
@@ -125,7 +128,14 @@
   </main>
 
   <footer class="simple-footer">
-    <p>© 2024 Vernal Medicare | <a href="tel:+14352195120">435-219-5120</a> | <a href="index.html">Home</a></p>
+    <p>© <span id="current-year-help"></span> Vernal Medicare | <a href="tel:+14352195120">435-219-5120</a> | <a href="index.html">Home</a> | <a href="medicare-plans-vernal-utah.html">Complete Medicare Guide</a></p>
   </footer>
+
+  <script>
+    (function(){
+      const y = document.getElementById('current-year-help');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>

@@ -76,9 +76,51 @@
 </head>
 
 <body>
-  <header class="simple-header">
+  <!-- Top Bar -->
+  <div class="top-bar">
     <div class="container">
-      <a href="index.html">← Back to Vernal Medicare</a>
+      <span>📧 <a href="mailto:rocco@vernalmedicare.com">rocco@vernalmedicare.com</a></span>
+      <span>📞 <a href="tel:+14352195120">+1 (435) 219-5120 (TTY: 711)</a></span>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="main-header">
+    <div class="container header-top">
+      <div class="logo-left">
+        <a href="index.html">
+          <img src="pictures/Rocco.webp" alt="Rocco DeLuca — Vernal Medicare">
+        </a>
+      </div>
+
+      <div class="site-name-center">
+        <a href="index.html" class="site-name" aria-label="Medicare Simplified — Home">
+          <picture>
+            <source srcset="pictures/medicare-simplified.webp" type="image/webp">
+            <img src="pictures/medicare-simplified.png" alt="Medicare Simplified" class="brand-logo">
+          </picture>
+        </a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+    <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+    </label>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="medigap.html" aria-current="page">Medigap</a></li>
+          <li><a href="aca.html">Under-65 Health Insurance</a></li>
+          <li><a href="indemnity.html">Copay Coverage</a></li>
+          <li><a href="life.html">Life Insurance</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -87,6 +129,10 @@
       <h1>Who Helps with Medicare in Vernal, Utah?</h1>
 
       <div class="answer-content">
+  <div style="background:#f0f9ff; border-left:5px solid #0b6ea3; padding:1.25rem; border-radius:8px; margin-bottom:1.5rem;">
+  <strong>Looking for the complete Medicare overview?</strong><br>
+  Start with our <a href="medicare-plans-vernal-utah.html">Complete Medicare Guide for Vernal and the Uintah Basin</a> covering costs, enrollment, Medigap, Medicare Advantage, and Part D.
+  </div>
         <p><strong>Vernal Medicare provides local, licensed Medicare help in Vernal and the Uintah Basin.</strong></p>
 
         <p>We help you compare Medicare Advantage, Medigap, and Part D plans at no cost to you. Our local agent, Rocco DeLuca, specializes in Medicare plans for Vernal, Naples, Maeser, Jensen, and all of Uintah County.</p>
@@ -102,6 +148,17 @@
           <li>Free enrollment assistance</li>
           <li>Local support before and after enrollment</li>
         </ul>
+
+        <h2>Popular Medicare Topics in Vernal</h2>
+
+<ul style="line-height:2; background:#f8fbff; padding:1.25rem 1.5rem; border-radius:8px; border:1px solid #d9e7f5;">
+  <li><a href="medicare-supplement-vs-advantage.html">Medicare Supplement vs Medicare Advantage</a></li>
+  <li><a href="plan-g-vs-plan-n-vernal.html">Plan G vs Plan N in Vernal</a></li>
+  <li><a href="hmo-vs-ppo-medicare-advantage.html">HMO vs PPO Medicare Advantage</a></li>
+  <li><a href="best-part-d-plans-vernal.html">Best Part D Prescription Drug Plans</a></li>
+  <li><a href="when-to-enroll-medicare-utah.html">When to Enroll in Medicare in Utah</a></li>
+  <li><a href="medicare-cost-uintah-county.html">2026 Medicare Costs in Uintah County</a></li>
+</ul>
 
         <h2>Want the Full Medicare Picture?</h2>
         <p>For a complete walkthrough of Medicare options, costs, enrollment periods, and local providers in Vernal, see our <a href="medicare-plans-vernal-utah.html">complete 2026 Medicare guide for Vernal and the Uintah Basin</a>.</p>
@@ -127,13 +184,41 @@
     </div>
   </main>
 
-  <footer class="simple-footer">
-    <p>© <span id="current-year-help"></span> Vernal Medicare | <a href="tel:+14352195120">435-219-5120</a> | <a href="index.html">Home</a> | <a href="medicare-plans-vernal-utah.html">Complete Medicare Guide</a></p>
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="current-year"></span> Vernal Medicare. All rights reserved.</p>
+      <p>Email: <a href="mailto:rocco@vernalmedicare.com">rocco@vernalmedicare.com</a> |
+      Phone: <a href="tel:+14352195120">435-219-5120 (TTY: 711)</a></p>
+      <p style="font-size:.9rem;opacity:.9">
+        Not connected with or endorsed by the U.S. government or the federal Medicare program.
+        By calling this number, you will be connected to a licensed insurance agent/producer.
+      </p>
+      <p><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
+    </div>
+    <p class="powered-by">
+      Powered by cozelosdata
+      <a href="https://cozelosdata.com/" target="_blank" rel="noopener noreferrer" class="powered-link">
+        <picture>
+          <source srcset="pictures/cozelos.webp" type="image/webp">
+          <img src="pictures/cozelos.webp" alt="Cozelos Data" class="powered-logo" width="120" height="24" loading="lazy" decoding="async">
+        </picture>
+      </a>
+    </p>
+  <nav aria-label="Medicare Resources">
+  <p><strong>Explore:</strong>
+    <a href="/medicare-plans-vernal-utah.html">Complete Medicare Guide</a> |
+    <a href="/medicare-help-vernal.html">Local Help</a> |
+    <a href="/medicare-agent-vernal.html">About Rocco</a> |
+    <a href="/part-d-help-vernal.html">Part D</a> |
+    <a href="/medicare-enrollment-vernal.html">Enrollment</a> |
+    <a href="/medicare-cost-uintah-county.html">Costs</a>
+  </p>
+ </nav>
   </footer>
 
   <script>
     (function(){
-      const y = document.getElementById('current-year-help');
+      const y = document.getElementById('current-year');
       if (y) y.textContent = new Date().getFullYear();
     })();
   </script>
